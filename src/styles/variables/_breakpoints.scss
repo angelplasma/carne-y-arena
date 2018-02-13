@@ -1,0 +1,34 @@
+/*
+  media query breakpoints loosely modeled after material design breakpoints
+  https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints
+
+  0          360          400         600         720         840          960         1280         ...
+  | sm mobile | med mobile | lg mobile | sm tablet | lg tablet | sm desktop | md desktop | lg desktop |
+  =====================================================================================================
+*/
+
+$breakpoints : (
+  small-mobile-down            : 'max-width: 359px',
+  medium-mobile-up             : 'min-width: 360px',
+  medium-mobile-down           : 'max-width: 399px',
+  large-mobile-up              : 'min-width: 400px',
+  large-mobile-down            : 'max-width: 599px',
+  small-tablet-up              : 'min-width: 600px',
+  small-tablet-down            : 'max-width: 719px',
+  large-tablet-up              : 'min-width: 720px',
+  large-tablet-down            : 'max-width: 839px',
+  small-desktop-up             : 'min-width: 840px',
+  small-desktop-down           : 'max-width: 959px',
+  medium-desktop-up            : 'min-width: 960px',
+  medium-desktop-down          : 'max-width: 1279px',
+  large-desktop-up             : 'min-width: 1280px',
+  landscape-small-mobile-down  : 'max-width: 599px',
+  landscape-medium-mobile-up   : 'min-width: 600px',
+  landscape-medium-mobile-down : 'max-width: 719px',
+  landscape-large-mobile-up    : 'min-width: 720px',
+  landscape-large-mobile-down  : 'max-width: 959px',
+  landscape-small-tablet-up    : 'min-width: 960px',
+  landscape-small-tablet-down  : 'max-width: 1023px',
+  landscape-large-tablet-up    : 'min-width: 1024px',
+  landscape-large-tablet-down  : 'max-width: 1279px',
+);

@@ -1,0 +1,61 @@
+@import '../styles/setup';
+
+.sand-panel {
+  p:nth-of-type(even),
+  p:last-child {
+    text-align: right;
+  }
+
+  .text {
+    margin: auto;
+    max-width: 500px;
+  }
+}
+
+.map-panel {
+  background: #fff;
+  border-radius: 20px;
+  margin: auto;
+  max-width: 1300px;
+  padding: 20px;
+  width: calc(100vw - 40px);
+
+  @include breakpoint(large-tablet-up) {
+    display: flex;
+    justify-content: space-around;
+    width: calc(100vw - 60px);
+  }
+
+  @include breakpoint(medium-desktop-up) {
+    padding: 75px;
+  }
+}
+
+.map-graphic {
+  // TODO
+}
+
+.map-content {
+  @include breakpoint(large-tablet-up) {
+    max-width: 325px;
+    padding-left: 20px;
+  }
+
+  @include breakpoint(medium-desktop-up) {
+    padding-left: 75px;
+  }
+
+  :global {
+    .button {
+      white-space: nowrap;
+    }
+  }
+}
+
+.quote-panel {
+  // TODO
+}
+
+.end-panel {
+  // TODO
+}

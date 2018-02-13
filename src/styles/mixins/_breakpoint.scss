@@ -1,0 +1,27 @@
+@mixin breakpoint($expression) {
+  @if (str-index($expression, 'landscape')) {
+    @media (bp($expression)) and (orientation: landscape) {
+      @content;
+    }
+  } @else if (str-index($expression, '-up')) {
+    // allow this breakpoint to be applied to print
+    @media print, (bp($expression)) {
+      @content;
+    }
+  } @else if (str-index($expression, 'small-tablet-down')) {
+    // prevent this breakpoint from being applied to print
+    @media screen and (bp($expression)) {
+      @content;
+    }
+  } @else {
+    @media (bp($expression)) {
+      @content;
+    }
+  }
+}
+
+@mixin range($start, $end) {
+  @media (bp($start)) and (bp($end)) {
+    @content;
+  }
+}

@@ -1,0 +1,11 @@
+// styles directory is for general sass setup
+// e.g. variables, functions and mixins
+
+@import 'variables/_breakpoints';
+@import 'variables/_colors';
+
+@import 'functions/_bp';
+@import 'functions/_color';
+
+@import 'mixins/_breakpoint';
+@import 'mixins/_smooth';
