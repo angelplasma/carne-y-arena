@@ -1,0 +1,44 @@
+@import '../styles/setup';
+
+.nav {
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+
+  li {
+    margin: 0 25px;
+  }
+
+  a {
+    display: block;
+    padding: 0.5em;
+  }
+}
+
+.link {
+  text-transform: uppercase;
+  text-decoration: none;
+
+  span {
+    display: block;
+  }
+
+  [data-context="header"] & {
+    color: color(tan2);
+  }
+
+  [data-context="panel"] & {
+    color: #fff;
+  }
+}
+
+.number {
+  margin-bottom: 1em;
+
+  [data-context="panel"] & {
+    color: red;
+  }
+}

@@ -8,12 +8,15 @@ import './index.scss'
 const TemplateWrapper = ({ data, children }) => (
   <div>
     <Helmet
-      title='Carne y Arena'
+      title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample description here' },
+        {
+          name: 'description',
+          content: data.site.siteMetadata.description,
+        },
       ]}
     />
-    <Header nav={data.allNavYaml.edges} />
+    <Header/>
     <main>
       {children()}
     </main>
@@ -27,14 +30,11 @@ TemplateWrapper.propTypes = {
 export default TemplateWrapper
 
 export const query = graphql`
-  query NavQuery {
-    allNavYaml {
-      edges {
-        node {
-          line1
-          line2
-          slug
-        }
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+        description
       }
     }
   }

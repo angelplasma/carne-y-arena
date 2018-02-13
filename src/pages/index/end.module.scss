@@ -3,5 +3,65 @@
 .panel {
   color: #fff;
   background: url('//placehold.it/600x400/334466/223355?text=FPO') 50% 0;
-  height: 500px;
+}
+
+.heart {
+  display: block;
+  margin: auto;
+  transform: translateY(-100px);
+}
+
+.text {
+  margin: auto;
+  max-width: 540px;
+  text-align: center;
+
+  :global {
+    .button {
+      margin-top: 50px;
+    }
+  }
+}
+
+.nav {
+  margin: auto;
+  max-width: 580px;
+}
+
+.divider {
+  background: rgba(#fff, 0.3);
+  border: 0;
+  height: 1px;
+  margin: 75px auto;
+  max-width: 700px;
+}
+
+.footer {
+  font-size: 13px;
+  padding: 20px;
+
+  @include breakpoint(small-desktop-down) {
+    text-align: center;
+  }
+
+  @include breakpoint(large-tablet-up) {
+    padding: 60px;
+  }
+}
+
+.logo-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint(small-desktop-down) {
+    justify-content: center;
+  }
+
+  li {
+    margin-right: 20px;
+    text-align: center;
+  }
 }

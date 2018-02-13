@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Carne y Arena',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,12 +15,5 @@ module.exports = {
         exclude: '\/global\/',
       },
     },
-    'gatsby-transformer-yaml',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: './src/data/',
-      },
-    }
   ],
 };
