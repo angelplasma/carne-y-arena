@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import styles from "./header.module.scss"
+import styles from './header.module.scss'
 
 const renderNavItem = ({node}, index) => {
   return (

@@ -1,7 +1,8 @@
+@import '../styles/setup';
 @import-normalize;
 
 html {
-  background: #F1EFEA;
+  background: color(sand);
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -14,6 +15,14 @@ body {
   box-sizing: inherit;
 }
 
+* :first-child {
+  margin-top: 0;
+}
+
+* :last-child {
+  margin-bottom: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -21,6 +30,7 @@ img {
 .button {
   background: #CC494D;
   color: #fff;
+  display: inline-block;
   font-size: 13px;
   font-weight: bold;
   padding: 1em 2em;

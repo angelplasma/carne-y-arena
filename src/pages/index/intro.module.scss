@@ -1,0 +1,49 @@
+@import '../../styles/setup';
+
+.panel {
+  $temporary-url: '//placehold.it/600x400/#{str-replace(#{color(sand)}, '#', '')}/#{str-replace(#{darken(color(sand), 3%)}, '#', '')}?text=SAND';
+  background: url($temporary-url) 50% 0;
+  padding: 20px;
+
+  @include breakpoint(large-tablet-up) {
+    padding: 50px 30px 100px;
+  }
+
+  @include breakpoint(medium-desktop-up) {
+    padding: 100px 30px;
+  }
+
+  p {
+    font-weight: bold;
+
+    &:nth-of-type(even),
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.headline {
+  // TEMPORARY TEXT STYLES
+  // WILL BE RENDERED VIA CANVAS LATER
+  color: color(tan1);
+  font-size: 32px;
+  font-style: italic;
+  line-height: 1;
+  margin: auto;
+  max-width: 800px;
+  text-align: center;
+
+  @include breakpoint(medium-desktop-up) {
+    font-size: 75px;
+  }
+}
+
+.text {
+  margin: auto;
+  max-width: 500px;
+}
+
+.highlight {
+  color: red;
+}
