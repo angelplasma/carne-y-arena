@@ -8,6 +8,10 @@
   margin: 0 0 0 auto;
   padding: 0;
 
+  &[data-context="header"] {
+    margin-right: 200px;
+  }
+
   li {
     margin: 0 25px;
   }

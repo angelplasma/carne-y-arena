@@ -3,8 +3,8 @@ import Link from 'gatsby-link'
 
 import styles from './nav.module.scss'
 
-const Nav = ({...attributes}) => (
-  <ul styleName="nav" {...attributes}>
+const Nav = (props) => (
+  <ul styleName="nav" {...props}>
     <li>
       <Link to="about" styleName ="link">
         <span styleName="number">01</span>

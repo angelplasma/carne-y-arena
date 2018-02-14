@@ -1,12 +1,14 @@
+@import '../styles/setup';
+
 .header {
   display: flex;
-  padding: 0.5em;
 }
 
 .title {
   color: #544D4A;
   font-style: italic;
   font-size: 22px;
+  padding: 0.5em;
   text-decoration: none;
 
   span {
@@ -15,31 +17,76 @@
   }
 }
 
-.nav {
+.utility {
+  color: #fff;
+  position: fixed;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  will-change: transform;
+  z-index: 100;
+
+  &[data-open=true] {
+    transform: translateY(100%);
+  }
+}
+
+.tag {
+  background: color(red);
   display: flex;
-  font-size: 14px;
-  font-weight: bold;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
-  margin: 0 0 0 auto;
-  padding: 0;
+  margin: 0;
+  padding: 12px 0 0;
+  width: 135px;
+
+  position: absolute;
+  right: 40px;
 
   li {
-    margin: 0 50px 0 0;
+    display: flex;
+    font-size: 13px;
+    margin: 0;
+
+    &:last-child {
+      width: 100%;
+    }
   }
 
-  a {
+  a,
+  button {
+    width: 100%;
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  img {
     display: block;
-    padding: 0.5em;
+    margin: auto;
   }
 }
 
-.link {
-  color: #3D3535;
-  text-transform: uppercase;
+.icon-link {
+  display: flex;
+  padding: 12px;
+}
+
+.text-link {
+  color: #fff;
+  padding: 12px 18px 18px;
+  text-align: center;
   text-decoration: none;
-
-  span {
-    display: block;
-  }
+  text-transform: uppercase;
 }
 
+.subscribe-panel {
+  background: color(red);
+  height: 150px;
+  transform: translateY(-100%);
+  width: 100%;
+}

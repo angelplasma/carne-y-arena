@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import { TICKETS_URL } from '../../../lib/constants'
 import Nav from '../../components/nav'
 import styles from './end.module.scss'
 
@@ -15,7 +16,7 @@ const EndPanel = ({nav}) => (
         chance to experience a piece of someone else’s journey.
       </p>
 
-      <Link to="#TODO" className="button">
+      <Link to={TICKETS_URL} className="button">
         Get Tickets
       </Link>
     </div>
