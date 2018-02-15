@@ -34,7 +34,7 @@
 
 .content {
   @include breakpoint(large-tablet-up) {
-    max-width: 325px;
+    max-width: 360px;
     padding-left: 20px;
   }
 
@@ -44,11 +44,20 @@
 
   :global {
     .button {
+      background: color(muted);
+      margin-top: 1.5em;
       white-space: nowrap;
     }
   }
 }
 
 .heading {
+  color: color(muted);
+  font-size: 24px;
+  line-height: 1.2;
   font-style: italic;
+
+  @include breakpoint(medium-desktop-up) {
+    font-size: 30px;
+  }
 }

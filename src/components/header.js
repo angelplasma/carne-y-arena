@@ -3,16 +3,43 @@ import Link from 'gatsby-link'
 
 import { TICKETS_URL } from '../../lib/constants'
 import Nav from './nav'
+import SubscribeFrom from './subscribe'
 import styles from './header.module.scss'
 import emailIcon from '../images/email.svg'
 import pinIcon from '../images/pin.svg'
 
 class Header extends React.Component {
   state = {
-    open: false
+    open: false,
+    responseStatus: false,
+    responseMessage: false
   }
 
-  renderEmailForm() {
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleEscapeKey, false);
+  }
+
+  changeView = ({status, message}) => {
+    this.setState({
+      responseStatus: status,
+      responseMessage: message
+    })
+  }
+
+  handleEscapeKey = (event) => {
+    if(event.keyCode === 27) {
+      this.setState({ open: false })
+      this.refs.emailButton.blur()
+    }
+  }
+
+  renderResetButton() {
+    return (
+      <button styleName="reset-button" onClick={this.resetForm}>Please try again.</button>
+    )
+  }
+
+  renderSignupForm() {
     return (
       <div styleName="subscribe-inner">
         <div styleName="subscribe-intro">
@@ -24,23 +51,28 @@ class Header extends React.Component {
         </div>
 
         <div>
-          <form action="https://emersoncollective.us11.list-manage.com/subscribe/post?u=3b12b4afc137627b9399e835c&amp;id=d9d9126a56" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" styleName="subscribe-form" target="_blank" noValidate>
-            <label htmlFor="mce-EMAIL" style={{display:'none'}}>Email Address</label>
-            <input type="email" name="EMAIL" styleName="subscribe-input" id="mce-EMAIL" placeholder="Your Email Address" />
-            <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true"><input type="text" name="b_3b12b4afc137627b9399e835c_d9d9126a56" tabIndex="-1" defaultValue="" /></div>
-            <button styleName="subscribe-button" className="button">Sign Up</button>
-          </form>
+          <SubscribeFrom onDone={this.changeView} />
         </div>
       </div>
     )
   }
 
-  renderEmailSuccess() {
+  renderSignupDone() {
     return (
-      <div styleName="subscribe-success">
-        <p>You are subscribed, thank you!</p>
+      <div styleName="subscribe-done">
+        <p>
+          {this.state.responseMessage}
+          {this.state.responseStatus == 'error' ? this.renderResetButton() : null}
+        </p>
       </div>
     )
+  }
+
+  resetForm = () => {
+    this.setState({
+      responseStatus: false,
+      responseMessage: false
+    })
   }
 
   toggle = () => {
@@ -55,12 +87,17 @@ class Header extends React.Component {
           <span>Carne</span> y <span>Arena</span>
         </Link>
 
+        <button styleName="menu-button" aria-controls="header-menu">
+          <span className="screenreader-only">Menu</span>
+          <span styleName="menu-icon"></span>
+        </button>
+
         <Nav data-context="header" />
 
         <div styleName="utility" data-open={this.state.open}>
           <ul styleName="tag">
             <li>
-              <button onClick={this.toggle} aria-controls="subscribe-panel" aria-expanded={this.state.open} styleName="icon-link">
+              <button ref="emailButton" onClick={this.toggle} aria-controls="subscribe-panel" aria-expanded={this.state.open} styleName="icon-link">
                 <img src={emailIcon} alt="" title="Email Newsletter Signup" />
               </button>
             </li>
@@ -77,7 +114,7 @@ class Header extends React.Component {
           </ul>
 
           <div id="subscribe-panel" styleName="subscribe-outer" aria-hidden={!this.state.open}>
-            {!this.state.subscribed ? this.renderEmailForm() : this.renderEmailSuccess()}
+            {!this.state.responseMessage ? this.renderSignupForm() : this.renderSignupDone()}
           </div>
         </div>
       </header>

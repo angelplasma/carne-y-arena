@@ -3,6 +3,12 @@
 .header {
   display: flex;
   padding: 40px;
+
+  @include breakpoint(large-tablet-up) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .title {
@@ -118,39 +124,7 @@
   }
 }
 
-.subscribe-form {
-  align-items: stretch;
-  display: flex;
-  width: 100%;
-}
-
-.subscribe-input {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #fff;
-  color: #fff;
-  flex-grow: 2;
-  flex-shrink: 1;
-  font-size: 30px;
-  font-style: italic;
-  line-height: 1.5;
-  margin-right: 40px;
-  padding: 0;
-  text-decoration: none;
-
-  @include placeholder {
-    color: rgba(#fff, 0.8);
-  }
-}
-
-.subscribe-button {
-  background: #fff;
-  color: color(red);
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-
-.subscribe-success {
+.subscribe-done {
   align-items: center;
   color: rgba(#fff, 0.8);
   display: flex;
@@ -158,4 +132,12 @@
   font-size: 30px;
   font-style: italic;
   justify-content: center;
+}
+
+.reset-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
 }

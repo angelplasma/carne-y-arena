@@ -3,12 +3,27 @@
 .panel {
   color: #fff;
   background: url('//placehold.it/600x400/334466/223355?text=FPO') 50% 0;
+
+  @include breakpoint(large-mobile-down) {
+    padding: 20px;
+  }
 }
 
 .heart {
   display: block;
   margin: auto;
-  transform: translateY(-100px);
+
+  @include breakpoint(large-mobile-down) {
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint(small-tablet-up) {
+    transform: translateY(-100px);
+  }
+
+  @include breakpoint(medium-desktop-up) {
+    transform: translateY(-150px);
+  }
 }
 
 .text {
@@ -18,7 +33,11 @@
 
   :global {
     .button {
-      margin-top: 50px;
+      margin-top: 20px;
+
+      @include breakpoint(small-tablet-up) {
+        margin-top: 50px;
+      }
     }
   }
 }
@@ -34,6 +53,10 @@
   height: 1px;
   margin: 75px auto;
   max-width: 700px;
+
+  @include breakpoint(large-mobile-down) {
+    margin: 40px 0;
+  }
 }
 
 .footer {

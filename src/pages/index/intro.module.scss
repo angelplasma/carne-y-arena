@@ -6,20 +6,11 @@
   padding: 20px;
 
   @include breakpoint(large-tablet-up) {
-    padding: 50px 30px 100px;
+    padding: 200px 30px 100px;
   }
 
   @include breakpoint(medium-desktop-up) {
-    padding: 100px 30px;
-  }
-
-  p {
-    font-weight: bold;
-
-    &:nth-of-type(even),
-    &:last-child {
-      text-align: right;
-    }
+    padding: 200px 30px;
   }
 }
 
@@ -42,6 +33,24 @@
 .text {
   margin: auto;
   max-width: 500px;
+
+  p {
+    color: color(dark);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+
+    &:nth-of-type(even),
+    &:last-child {
+      text-align: right;
+    }
+
+    &:nth-of-type(3) {
+      font-style: italic;
+      font-size: 32px;
+      line-height: 1.5;
+    }
+  }
 }
 
 .highlight {

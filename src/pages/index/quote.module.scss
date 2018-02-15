@@ -2,23 +2,19 @@
 
 .panel {
   background: url('//placehold.it/600x400/cc5555/bb4444?text=FPO') 50% 0;
-  padding: 20px;
+  padding: 75px 20px;
 
   @include breakpoint(small-tablet-up) {
-    padding: 75px 30px;
+    padding: 75px 30px 150px;
   }
 
   @include breakpoint(large-tablet-up) {
-    padding: 40vw 30px 100px;
+    padding: 40vw 30px 200px;
   }
 
   @include breakpoint(medium-desktop-up) {
-    padding-bottom: 200px;
-    padding-top: 45vw;
-  }
-
-  @include breakpoint(large-desktop-up) {
     padding-bottom: 300px;
+    padding-top: 45vw;
   }
 
   @media (min-width: 1300px) {
@@ -39,9 +35,19 @@
     font-size: 24px;
     font-weight: bold;
     font-style: italic;
+    line-height: 1.25;
+    margin-bottom: 0.5em;
 
     @include breakpoint(large-tablet-up) {
+      font-size: 32px;
+    }
+
+    @include breakpoint(medium-desktop-up) {
       font-size: 48px;
+    }
+
+    @include breakpoint(large-desktop-up) {
+      font-size: 64px;
     }
 
     &:before {
