@@ -2,6 +2,7 @@
 
 .header {
   display: flex;
+  padding: 40px;
 }
 
 .title {
@@ -19,7 +20,9 @@
 
 .utility {
   color: #fff;
+  left: 0;
   position: fixed;
+  top: 0;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
   width: 100%;
@@ -84,9 +87,75 @@
   text-transform: uppercase;
 }
 
-.subscribe-panel {
+.subscribe-outer {
   background: color(red);
-  height: 150px;
+  display: flex;
+  height: 185px;
   transform: translateY(-100%);
   width: 100%;
+}
+
+.subscribe-inner {
+  display: flex;
+
+  > div {
+    align-items: center;
+    display: flex;
+    padding: 40px;
+    width: 50%;
+  }
+}
+
+.subscribe-intro {
+  background: #fff;
+  color: color(red);
+  display: flex;
+  line-height: 1.5;
+
+  span {
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.subscribe-form {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+}
+
+.subscribe-input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  flex-grow: 2;
+  flex-shrink: 1;
+  font-size: 30px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-right: 40px;
+  padding: 0;
+  text-decoration: none;
+
+  @include placeholder {
+    color: rgba(#fff, 0.8);
+  }
+}
+
+.subscribe-button {
+  background: #fff;
+  color: color(red);
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.subscribe-success {
+  align-items: center;
+  color: rgba(#fff, 0.8);
+  display: flex;
+  flex: 1;
+  font-size: 30px;
+  font-style: italic;
+  justify-content: center;
 }
