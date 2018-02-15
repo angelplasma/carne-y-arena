@@ -2,6 +2,7 @@
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   font-size: 14px;
   font-weight: bold;
   list-style: none;
@@ -9,29 +10,79 @@
   padding: 0;
 
   &[data-context="header"] {
-    margin-right: 200px;
+    @include breakpoint($mobile-nav) {
+      background: color(red);
+      color: #fff;
+      flex-wrap: wrap;
+      left: 0;
+      justify-content: space-around;
+      position: absolute;
+      right: 40px;
+      z-index: 200;
+
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+      will-change: transform;
+
+      &[data-open=true] {
+        transform: translateY(0);
+      }
+    }
+
+    @include breakpoint($desktop-nav) {
+      margin-right: 150px;
+    }
+
+    @include breakpoint(large-desktop-up) {
+      margin-right: 180px;
+    }
   }
 
   li {
-    margin: 0 25px;
-  }
+    margin: 0;
 
-  a {
-    display: block;
-    padding: 0.5em;
+    @include breakpoint(large-mobile-down) {
+      flex: 1 1 120px;
+    }
+
+    @include breakpoint($desktop-nav) {
+      margin: 0 20px;
+    }
+
+    @include breakpoint(large-desktop-up) {
+      margin: 0 35px;
+    }
   }
 }
 
 .link {
+  display: block;
+  padding: 5vw;
   text-transform: uppercase;
   text-decoration: none;
 
+  @include breakpoint($desktop-nav) {
+    padding: 0.5em;
+  }
+
   span {
-    display: block;
+    @include breakpoint(small-tablet-down) {
+      margin-right: 0.6ch; // approximately the width of the space character
+    }
+
+    @include breakpoint(large-tablet-up) {
+      display: block;
+    }
   }
 
   [data-context="header"] & {
-    color: color(tan2);
+    @include breakpoint($mobile-nav) {
+      color: #fff;
+    }
+
+    @include breakpoint($desktop-nav) {
+      color: color(tan2);
+    }
   }
 
   [data-context="panel"] & {
@@ -40,7 +91,12 @@
 }
 
 .number {
-  margin-bottom: 1em;
+  display: block;
+  margin-bottom: 0.5em;
+
+  @include breakpoint(large-tablet-up) {
+    margin-bottom: 1em;
+  }
 
   [data-context="panel"] & {
     color: red;

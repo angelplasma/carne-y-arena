@@ -11,6 +11,10 @@ body {
   margin: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -31,7 +35,6 @@ img {
   background: #CC494D;
   border: 0;
   color: #fff;
-  cursor: pointer;
   display: inline-block;
   font-size: 13px;
   font-weight: bold;

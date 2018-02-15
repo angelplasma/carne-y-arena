@@ -14,12 +14,17 @@
   color: #fff;
   flex-grow: 2;
   flex-shrink: 1;
-  font-size: 30px;
+  font-size: 18px;
   font-style: italic;
   line-height: 1.5;
-  margin-right: 40px;
+  margin-right: 20px;
   padding: 0;
   text-decoration: none;
+
+  @include breakpoint($desktop-nav) {
+    font-size: 30px;
+    margin-right: 40px;
+  }
 
   @include placeholder {
     color: rgba(#fff, 0.8);

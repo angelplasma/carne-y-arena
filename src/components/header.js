@@ -6,11 +6,13 @@ import Nav from './nav'
 import SubscribeFrom from './subscribe'
 import styles from './header.module.scss'
 import emailIcon from '../images/email.svg'
+import menuIcon from '../images/menu.svg'
 import pinIcon from '../images/pin.svg'
 
 class Header extends React.Component {
   state = {
-    open: false,
+    mobileNavOpen: false,
+    utilityOpen: false,
     responseStatus: false,
     responseMessage: false
   }
@@ -27,9 +29,13 @@ class Header extends React.Component {
   }
 
   handleEscapeKey = (event) => {
-    if(event.keyCode === 27) {
-      this.setState({ open: false })
+    if( event.keyCode === 27) {
+      this.setState({
+        mobileNavOpen: false,
+        utilityOpen: false
+      })
       this.refs.emailButton.blur()
+      this.refs.mobileNavButton.blur()
     }
   }
 
@@ -75,9 +81,12 @@ class Header extends React.Component {
     })
   }
 
-  toggle = () => {
-    this.setState({ open: !this.state.open })
-    event.preventDefault()
+  toggleMobileNav = () => {
+    this.setState({ mobileNavOpen: !this.state.mobileNavOpen })
+  }
+
+  toggleUtility = () => {
+    this.setState({ utilityOpen: !this.state.utilityOpen })
   }
 
   render() {
@@ -87,17 +96,12 @@ class Header extends React.Component {
           <span>Carne</span> y <span>Arena</span>
         </Link>
 
-        <button styleName="menu-button" aria-controls="header-menu">
-          <span className="screenreader-only">Menu</span>
-          <span styleName="menu-icon"></span>
-        </button>
+        <Nav data-context="header" data-open={this.state.mobileNavOpen} />
 
-        <Nav data-context="header" />
-
-        <div styleName="utility" data-open={this.state.open}>
+        <div styleName="utility" data-open={this.state.utilityOpen}>
           <ul styleName="tag">
             <li>
-              <button ref="emailButton" onClick={this.toggle} aria-controls="subscribe-panel" aria-expanded={this.state.open} styleName="icon-link">
+              <button ref="emailButton" onClick={this.toggleUtility} aria-controls="subscribe-panel" aria-expanded={this.state.utilityOpen} styleName="icon-link">
                 <img src={emailIcon} alt="" title="Email Newsletter Signup" />
               </button>
             </li>
@@ -113,10 +117,14 @@ class Header extends React.Component {
             </li>
           </ul>
 
-          <div id="subscribe-panel" styleName="subscribe-outer" aria-hidden={!this.state.open}>
+          <div id="subscribe-panel" styleName="subscribe-outer" aria-hidden={!this.state.utilityOpen}>
             {!this.state.responseMessage ? this.renderSignupForm() : this.renderSignupDone()}
           </div>
         </div>
+
+        <button ref="mobileNavButton" onClick={this.toggleMobileNav} styleName="menu-button">
+          <img src={menuIcon} alt="" title="Menu" />
+        </button>
       </header>
     )
   }

@@ -56,33 +56,31 @@ class SubscribeForm extends React.Component {
     const { status, message } = this.state
 
     return (
-      <div>
-        <form
-          action={SUBSCRIBE_URL}
-          method="post"
-          styleName="form"
-          noValidate>
-          <input
-            ref={node => (this.input = node)}
-            type="email"
-            defaultValue=""
-            name="EMAIL"
-            required={true}
-            placeholder="Your Email Address"
-            styleName="input"
-            onChange={this.handleChange} />
+      <form
+        action={SUBSCRIBE_URL}
+        method="post"
+        styleName="form"
+        noValidate>
+        <input
+          ref={node => (this.input = node)}
+          type="email"
+          defaultValue=""
+          name="EMAIL"
+          required={true}
+          placeholder="Your Email Address"
+          styleName="input"
+          onChange={this.handleChange} />
 
-          <button
-            disabled={!this.state.status || this.state.status === "sending"}
-            onClick={this.handleSubmit}
-            type="submit"
-            styleName="button"
-            className="button">
-            Sign Up
-          </button>
+        <button
+          disabled={!this.state.status || this.state.status === "sending"}
+          onClick={this.handleSubmit}
+          type="submit"
+          styleName="button"
+          className="button">
+          Sign Up
+        </button>
 
-        </form>
-      </div>
+      </form>
     )
           // {status === 'sending' && <p styleName="status"dangerouslySetInnerHTML={{ __html: message }} />}
           // {status === 'error' && <p styleName="status"dangerouslySetInnerHTML={{ __html: message }} />}
