@@ -1,13 +1,14 @@
 @import '../styles/setup';
 
 .header {
+  align-items: center;
   display: flex;
   position: absolute;
   top: 0;
   width: 100%;
 
   @include breakpoint($desktop-nav) {
-    padding: 40px;
+    padding: 20px 40px;
   }
 }
 
@@ -94,7 +95,6 @@
   width: 120px;
 
   @include breakpoint($desktop-nav) {
-    padding: 12px 0 0;
     width: 135px;
   }
 
@@ -168,11 +168,9 @@
     align-items: center;
     display: flex;
     padding: 20px;
-    width: 100%;
 
-    @include breakpoint($desktop-nav) {
+    @include breakpoint(medium-mobile-up) {
       padding: 40px;
-      width: 50%;
     }
   }
 }
@@ -182,11 +180,18 @@
   color: color(red);
   display: flex;
   line-height: 1.5;
+  flex-basis: 400px;
+  flex-grow: 1;
 
   span {
     font-weight: bold;
     font-style: italic;
   }
+}
+
+.subscribe-form {
+  flex-basis: 560px;
+  flex-grow: 3;
 }
 
 .subscribe-done {

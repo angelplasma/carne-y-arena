@@ -82,8 +82,6 @@ class SubscribeForm extends React.Component {
 
       </form>
     )
-          // {status === 'sending' && <p styleName="status"dangerouslySetInnerHTML={{ __html: message }} />}
-          // {status === 'error' && <p styleName="status"dangerouslySetInnerHTML={{ __html: message }} />}
   }
 }
 

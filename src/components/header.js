@@ -59,7 +59,7 @@ class Header extends React.Component {
           </p>
         </div>
 
-        <div>
+        <div styleName="subscribe-form">
           <SubscribeFrom onDone={this.changeView} />
         </div>
       </div>

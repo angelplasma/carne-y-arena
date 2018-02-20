@@ -8,14 +8,14 @@ const cx = classNames.bind(styles);
 
 class Nav extends React.Component {
   render() {
-    const {pathname} = this.props
+    const {pathname, ...htmlAttrs} = this.props
     const navClassName = cx({
       nav: true,
       inverse: pathname === '/',
     });
 
     return (
-      <ul id="header-menu" className={navClassName} {...this.props}>
+      <ul id="header-menu" className={navClassName} {...htmlAttrs}>
         <li>
           <Link to="about" styleName="link" activeClassName={styles.active}>
             <span styleName="number">01</span>
