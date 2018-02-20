@@ -2,8 +2,8 @@
 
 ## Links
 
-+ Staging Site: [TODO]
-+ Production Site: [TODO]
++ Staging Site: https://master.carneyarenadc.netlify.com/
++ Production Site: https://carneyarenadc.com/ (or https://carneyarenadc.netlify.com/)
 
 ## Requirements
 
