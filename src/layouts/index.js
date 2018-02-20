@@ -5,26 +5,28 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './index.scss'
 
-const TemplateWrapper = ({ data, children }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        {
-          name: 'description',
-          content: data.site.siteMetadata.description,
-        },
-      ]}
-    />
-    <Header/>
-    <main>
-      {children()}
-    </main>
-  </div>
-)
+class TemplateWrapper extends React.Component {
+  render() {
+    const {data, children, location} = this.props
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+    return (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            {
+              name: 'description',
+              content: data.site.siteMetadata.description,
+            },
+          ]}
+        />
+        <Header pathname={location.pathname} />
+        <main>
+          {children()}
+        </main>
+      </div>
+    )
+  }
 }
 
 export default TemplateWrapper

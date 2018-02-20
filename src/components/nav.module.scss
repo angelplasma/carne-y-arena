@@ -12,7 +12,6 @@
   &[data-context="header"] {
     @include breakpoint($mobile-nav) {
       background: color(red);
-      color: #fff;
       flex-wrap: wrap;
       left: 0;
       justify-content: space-around;
@@ -57,48 +56,128 @@
 
 .link {
   display: block;
-  padding: 5vw;
   text-transform: uppercase;
   text-decoration: none;
 
-  @include breakpoint($desktop-nav) {
-    padding: 0.5em;
-  }
-
-  span {
-    @include breakpoint(small-tablet-down) {
-      margin-right: 0.6ch; // approximately the width of the space character
-    }
-
-    @include breakpoint(large-tablet-up) {
-      display: block;
-    }
-  }
-
   [data-context="header"] & {
     @include breakpoint($mobile-nav) {
-      color: #fff;
+      color: color(offwhite);
+      padding: 5vw;
     }
 
     @include breakpoint($desktop-nav) {
       color: color(tan2);
+      padding: 0.5em;
+    }
+  }
+
+  .inverse & {
+    @include breakpoint($desktop-nav) {
+      color: color(offwhite);
     }
   }
 
   [data-context="panel"] & {
-    color: #fff;
+    color: color(offwhite);
+    padding: 0.5em;
+  }
+
+  @include breakpoint($desktop-nav) {
+    position: relative;
+
+    &:after {
+      border-bottom: 1px solid color(red);
+      bottom: 0;
+      left: 0;
+      content: '';
+      display: block;
+      position: absolute;
+      transition: transform 0.2s ease-in-out;
+      transform-origin: 0 100%;
+      transform: rotate(-45deg) scaleX(0);
+      will-change: transform;
+      width: 100px;
+      z-index: -1;
+    }
+  }
+}
+
+.active {
+  &:after {
+    transform: rotate(-45deg) scaleX(1);
   }
 }
 
 .number {
-  display: block;
+  display: inline-block;
   margin-bottom: 0.5em;
 
+  @include breakpoint($desktop-nav) {
+    margin: -0.5em;
+    padding: 0.5em;
+  }
+
   @include breakpoint(large-tablet-up) {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .active & {
+    @include breakpoint($desktop-nav) {
+      color: color(red);
+    }
+  }
+
+  .inverse & {
+    color: color(offwhite);
+  }
+
+  .nav:not(.inverse) & {
+    @include breakpoint($desktop-nav) {
+      color: color(red);
+    }
+  }
+
+  .link:not(.active) & {
+    @include breakpoint($desktop-nav) {
+      position: relative;
+
+      &:after {
+        border-bottom: 1px solid color(red);
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: transform 0.15s ease-in-out;
+        transform-origin: 0 0;
+        transform: rotate(45deg) scaleX(0);
+        will-change: transform;
+        width: 141.4213%; // diagonal length = width * √2
+        z-index: 10;
+
+        .inverse & {
+          border-bottom-color: color(offwhite);
+        }
+      }
+    }
+  }
+
+  .link:not(.active):hover & {
+    @include breakpoint($desktop-nav) {
+      &:after {
+        transform: rotate(45deg) scaleX(1);
+      }
+    }
   }
 
   [data-context="panel"] & {
     color: red;
+  }
+}
+
+.line {
+  display: block;
+
+  @include breakpoint(small-tablet-down) {
+    margin-right: 0.6ch; // approximately the width of the space character
   }
 }

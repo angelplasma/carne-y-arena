@@ -2,25 +2,53 @@
 
 .header {
   display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
 
   @include breakpoint($desktop-nav) {
     padding: 40px;
-    position: absolute;
-    top: 0;
-    width: 100%;
   }
 }
 
 .title {
-  color: #544D4A;
+  color: color(tan2);
   font-style: italic;
-  font-size: 22px;
+  font-size: 28px;
+  font-weight: bold;
   padding: 0.5em;
   text-decoration: none;
 
+  @include breakpoint($mobile-nav) {
+    transform-origin: 0 50%;
+    transform: scale(0.6);
+  }
+
+  &.inverse {
+    color: color(offwhite);
+  }
+
   span {
-    font-weight: bold;
-    text-transform: uppercase;
+    display: block;
+  }
+}
+
+.line1 {
+  font-size: 13px;
+}
+
+.line2 {
+  text-transform: uppercase;
+
+  b {
+    color: color(tan2);
+    font-weight: normal;
+  }
+
+  .inverse & {
+    b {
+      color: rgba(color(offwhite), 0.6);
+    }
   }
 }
 

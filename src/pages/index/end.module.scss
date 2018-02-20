@@ -3,26 +3,10 @@
 .panel {
   color: #fff;
   background: url('//placehold.it/600x400/334466/223355?text=FPO') 50% 0;
+  padding-top: 75px;
 
   @include breakpoint(large-mobile-down) {
     padding: 20px;
-  }
-}
-
-.heart {
-  display: block;
-  margin: auto;
-
-  @include breakpoint(large-mobile-down) {
-    margin-bottom: 40px;
-  }
-
-  @include breakpoint(small-tablet-up) {
-    transform: translateY(-100px);
-  }
-
-  @include breakpoint(medium-desktop-up) {
-    transform: translateY(-150px);
   }
 }
 
@@ -44,7 +28,7 @@
 
 .nav {
   margin: auto;
-  max-width: 580px;
+  max-width: 600px;
 }
 
 .divider {

@@ -1,34 +1,39 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import classNames from 'classnames/bind'
 
 import styles from './nav.module.scss'
 
-const Nav = (props) => (
-  <ul id="header-menu" styleName="nav" {...props}>
-    <li>
-      <Link to="about" styleName ="link">
-        <span styleName="number">01</span>
-        <span>About</span>
-        <span>the Exhibition</span>
-      </Link>
-    </li>
+const cx = classNames.bind(styles);
 
-    <li>
-      <Link to="bring" styleName ="link">
-        <span styleName="number">02</span>
-        <span>What to</span>
-        <span>Bring With You</span>
-      </Link>
-    </li>
+class Nav extends React.Component {
+  render() {
+    const {pathname} = this.props
+    const navClassName = cx({
+      nav: true,
+      inverse: pathname === '/',
+    });
 
-    <li>
-      <Link to="leave" styleName ="link">
-        <span styleName="number">03</span>
-        <span>What to</span>
-        <span>Leave Behind</span>
-      </Link>
-    </li>
-  </ul>
-)
+    return (
+      <ul id="header-menu" className={navClassName} {...this.props}>
+        <li>
+          <Link to="about" styleName="link" activeClassName={styles.active}>
+            <span styleName="number">01</span>
+            <span styleName="line">About</span>
+            <span styleName="line">the Exhibition</span>
+          </Link>
+        </li>
+
+        <li>
+          <Link to="info" styleName="link" activeClassName={styles.active}>
+            <span styleName="number">02</span>
+            <span styleName="line">Additional</span>
+            <span styleName="line">Information</span>
+          </Link>
+        </li>
+      </ul>
+    )
+  }
+}
 
 export default Nav

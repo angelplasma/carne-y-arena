@@ -11,6 +11,7 @@
     "develop": "gatsby develop"
   },
   "dependencies": {
+    "classnames": "2.2.5",
     "gatsby": "^1.9.158",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-react-css-modules": "1.0.12",

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import classNames from 'classnames/bind'
 
 import { TICKETS_URL } from '../../lib/constants'
 import Nav from './nav'
@@ -8,6 +9,8 @@ import styles from './header.module.scss'
 import emailIcon from '../images/email.svg'
 import menuIcon from '../images/menu.svg'
 import pinIcon from '../images/pin.svg'
+
+const cx = classNames.bind(styles);
 
 class Header extends React.Component {
   state = {
@@ -90,13 +93,22 @@ class Header extends React.Component {
   }
 
   render() {
+    const {pathname} = this.props
+    const titleClassName = cx({
+      title: true,
+      inverse: pathname === '/',
+    });
+
     return (
       <header styleName="header">
-        <Link to="/" styleName="title">
-          <span>Carne</span> y <span>Arena</span>
+        <Link to="/" className={titleClassName}>
+          <span styleName="line1">Alejandro G. Iñárritu’s</span>
+          <span styleName="line2">
+            Carne <b>y</b> Arena
+          </span>
         </Link>
 
-        <Nav data-context="header" data-open={this.state.mobileNavOpen} />
+        <Nav data-context="header" data-open={this.state.mobileNavOpen} pathname={pathname} />
 
         <div styleName="utility" data-open={this.state.utilityOpen}>
           <ul styleName="tag">

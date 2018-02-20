@@ -7,8 +7,6 @@ import styles from './end.module.scss'
 
 const EndPanel = ({nav}) => (
   <section styleName="panel">
-    <img src="//placehold.it/600x800?text=FPO" alt="" styleName="heart" />
-
     <div styleName="text">
       <p>
         It’s hard to talk about a reality that, for many of us, is a few

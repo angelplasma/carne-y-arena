@@ -1,58 +1,41 @@
 @import '../../styles/setup';
 
 .panel {
-  $temporary-url: '//placehold.it/600x400/#{str-replace(#{color(sand)}, '#', '')}/#{str-replace(#{darken(color(sand), 3%)}, '#', '')}?text=SAND';
+  $temporary-url: '//placehold.it/400x400/035/146?text=FPO';
   background: url($temporary-url) 50% 0;
-  padding: 20px;
+  padding: 100px 6.25vw 50px;
+
+  @include breakpoint(large-mobile-up) {
+    padding: 25vw 10vw;
+  }
 
   @include breakpoint(large-tablet-up) {
-    padding: 200px 30px 100px;
+    padding: ((320/$max-breakpoint) * 100vw) 30px;
   }
 
-  @include breakpoint(medium-desktop-up) {
-    padding: 200px 30px;
+  @include breakpoint(large-desktop-up) {
+    padding: 320px 20px;
   }
 }
 
-.headline {
-  // TEMPORARY TEXT STYLES
-  // WILL BE RENDERED VIA CANVAS LATER
-  color: color(tan1);
-  font-size: 32px;
-  font-style: italic;
-  line-height: 1;
+.intro {
+  color: color(offwhite);
+  font-size: (18/320) * 100vw;
+  font-weight: bold;
+  line-height: 1.4;
   margin: auto;
-  max-width: 800px;
-  text-align: center;
 
-  @include breakpoint(medium-desktop-up) {
-    font-size: 75px;
+  @include breakpoint(large-tablet-up) {
+    font-size: (45/$max-breakpoint) * 100vw;
+    max-width: (820/$max-breakpoint) * 100vw;
   }
-}
 
-.text {
-  margin: auto;
-  max-width: 500px;
-
-  p {
-    color: color(dark);
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 2;
-
-    &:nth-of-type(even),
-    &:last-child {
-      text-align: right;
-    }
-
-    &:nth-of-type(3) {
-      font-style: italic;
-      font-size: 32px;
-      line-height: 1.5;
-    }
+  @include breakpoint(large-desktop-up) {
+    font-size: 45px;
+    max-width: 820px;
   }
-}
 
-.highlight {
-  color: red;
+  b {
+    color: color(red);
+  }
 }
