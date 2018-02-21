@@ -1,0 +1,20 @@
+@import '../styles/setup';
+
+.container {
+  padding: 120px 20px 20px;
+
+  @include breakpoint($desktop-nav) {
+    margin: auto;
+    max-width: 1000px;
+    padding: 200px 0 0;
+  }
+}
+
+.content {
+  margin-left: auto;
+  max-width: 500px;
+}
+
+.background {
+  // TODO
+}

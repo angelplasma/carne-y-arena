@@ -37,33 +37,3 @@
     color: color(red);
   }
 }
-
-.footer {
-  font-size: 13px;
-  padding: 20px;
-
-  @include breakpoint(small-desktop-down) {
-    text-align: center;
-  }
-
-  @include breakpoint(large-tablet-up) {
-    padding: 60px;
-  }
-}
-
-.logo-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  @include breakpoint(small-desktop-down) {
-    justify-content: center;
-  }
-
-  li {
-    margin-right: 20px;
-    text-align: center;
-  }
-}

@@ -13,14 +13,15 @@
 }
 
 .title {
-  font-size: 38px;
-  font-weight: bold;
-  padding: 0.5em;
   text-decoration: none;
 
   @include breakpoint($mobile-nav) {
-    transform-origin: 0 50%;
-    transform: scale(0.6);
+    padding: 0.5em;
+    font-size: 18px;
+  }
+
+  @include breakpoint($desktop-nav) {
+    font-size: 38px;
   }
 
   span {
@@ -29,13 +30,30 @@
 }
 
 .line1 {
-  font-size: 16px;
   font-style: italic;
+
+  @include breakpoint($mobile-nav) {
+    font-size: 12px;
+    font-size: 3.75vw;
+  }
+
+  @include breakpoint(small-tablet-up) {
+    font-size: 16px;
+  }
 }
 
 .line2 {
   font-family: $semibold;
   text-transform: uppercase;
+
+  @include breakpoint($mobile-nav) {
+    font-size: 18px;
+    font-size: 5.625vw;
+  }
+
+  @include breakpoint(small-tablet-up) {
+    font-size: 38px;
+  }
 
   b {
     color: rgba(color(offwhite), 0.6);
@@ -47,10 +65,16 @@
 .menu-button {
   background: color(red);
   border: 0;
+  flex-shrink: 0;
   height: 40px;
-  margin-bottom: auto;
   margin-left: auto;
+  padding: 0;
   width: 40px;
+
+  // override specificity
+  &[class] {
+    margin-bottom: auto;
+  }
 
   @include breakpoint($desktop-nav) {
     display: none;
@@ -84,7 +108,7 @@
   position: absolute;
   right: 40px;
   top: 100%;
-  width: 120px;
+  width: 115px;
 
   @include breakpoint($desktop-nav) {
     width: 170px;
@@ -136,7 +160,7 @@
   @include breakpoint($mobile-nav) {
     font-size: 13px;
     letter-spacing: 1.3px;
-    padding: 10px 12px 12px;
+    padding: 10px 10px 12px;
   }
 
   @include breakpoint($desktop-nav) {

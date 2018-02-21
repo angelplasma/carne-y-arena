@@ -14,15 +14,6 @@ const IndexPage = () => (
         immersive experience is unlike anything you’ve seen before<b>.</b>
       </p>
     </section>
-
-    <footer styleName="footer">
-      <p>Produced and Financed by Legendary Entertainment, Fondazione Prada, and Emerson Collective.</p>
-      <ul styleName="logo-list">
-        <li><img src="//placehold.it/140x40?text=LOGO" alt=""/></li>
-        <li><img src="//placehold.it/140x40?text=LOGO" alt=""/></li>
-        <li><img src="//placehold.it/140x40?text=LOGO" alt=""/></li>
-      </ul>
-    </footer>
   </div>
 )
 

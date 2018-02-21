@@ -116,7 +116,7 @@ class Header extends React.Component {
             </li>
 
             <li>
-              <Link to={TICKETS_URL} styleName="text-link">Get Tickets</Link>
+              <a href={TICKETS_URL} styleName="text-link" rel="noopener">Get Tickets</a>
             </li>
           </ul>
 
