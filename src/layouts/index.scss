@@ -5,7 +5,7 @@
 @include font-face('gilroy-semibold', 'gilroy-semibold-webfont');
 
 html {
-  background: #035;
+  background: #1B2634 linear-gradient(180deg, #495269 0%, rgba(121, 118, 140, 0.24) 65%, rgba(42, 54, 71, 0) 100%) no-repeat;
   color: color(offwhite);
   box-sizing: border-box;
   font-family: $regular;
@@ -13,6 +13,22 @@ html {
 
 body {
   margin: 0;
+
+  &::before {
+    background-image: radial-gradient(circle closest-side, rgba(204, 159, 159, 0.16) 0%, rgba(74, 80, 101, 0) 100%);
+    content: '';
+    display: block;
+    position: absolute;
+    height: 60vw;
+    left: 0;
+    margin: auto;
+    max-width: 850px;
+    max-height: 850px;
+    right: 0;
+    top: 150px;
+    width: 60%;
+    z-index: -1;
+  }
 }
 
 a {
