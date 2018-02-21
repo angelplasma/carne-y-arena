@@ -1,20 +1,61 @@
 @import '../styles/setup';
 
+$max-quote-width: 1100px;
+
 .container {
-  padding: 120px 20px 20px;
+  padding: 120px 0 20px;
+  position: relative;
 
   @include breakpoint($desktop-nav) {
     margin: auto;
-    max-width: 1000px;
-    padding: 200px 0 0;
+    max-width: $max-quote-width;
+    padding-top: 200px;
   }
 }
 
 .content {
-  margin-left: auto;
+  margin: auto;
   max-width: 500px;
+
+  i {
+    font-style: normal;
+  }
+
+  @media (min-width: $max-quote-width) {
+    padding-top: 100px;
+    position: absolute;
+    right: 0;
+    top: 120px;
+    z-index: 1;
+  }
+
+  @include breakpoint($desktop-nav) {
+    top: 200px;
+  }
 }
 
 .background {
-  // TODO
+  @media (max-width: $max-quote-width - 1) {
+    display: none;
+  }
+
+  @media (min-width: $max-quote-width) {
+    margin: auto;
+
+    blockquote {
+      color: #A8ACBA;
+      opacity: 0.08;
+      padding: 0;
+
+      p {
+        font-family: $extrabolditalic;
+        font-size: 100px;
+        line-height: 1;
+      }
+
+      i {
+        color: #DB7275;
+      }
+    }
+  }
 }

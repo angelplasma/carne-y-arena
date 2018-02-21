@@ -3,12 +3,17 @@
 
 @include font-face('gilroy-regular', 'gilroy-regular-webfont');
 @include font-face('gilroy-semibold', 'gilroy-semibold-webfont');
+@include font-face('gilroy-extrabolditalic', 'gilroy-extrabolditalic-webfont');
 
 html {
   background: #1B2634 linear-gradient(180deg, #495269 0%, rgba(121, 118, 140, 0.24) 65%, rgba(42, 54, 71, 0) 100%) no-repeat;
   color: color(offwhite);
   box-sizing: border-box;
   font-family: $regular;
+
+  @include breakpoint(medium-desktop-up) {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -29,6 +34,25 @@ body {
     width: 60%;
     z-index: -1;
   }
+}
+
+main {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  p {
+    line-height: 1.75;
+    margin: 2.5em 0;
+
+    @include breakpoint(medium-desktop-up) {
+      line-height: 2;
+    }
+  }
+}
+
+p b,
+p strong {
+  font-family: $semibold;
 }
 
 a {
@@ -68,4 +92,16 @@ img {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.screenreader-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px 1px 1px 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

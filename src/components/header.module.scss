@@ -6,6 +6,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 500;
 
   @include breakpoint($desktop-nav) {
     padding: 15px 40px;
