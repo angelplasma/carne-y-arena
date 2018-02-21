@@ -1,15 +1,22 @@
 @import '../styles/setup';
 @import-normalize;
 
+@include font-face('gilroy-regular', 'gilroy-regular-webfont');
+@include font-face('gilroy-semibold', 'gilroy-semibold-webfont');
+
 html {
-  background: color(sand);
-  color: #454545;
+  background: #035;
+  color: color(offwhite);
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: $regular;
 }
 
 body {
   margin: 0;
+}
+
+a {
+  color: color(offwhite);
 }
 
 button {
@@ -37,8 +44,9 @@ img {
   border: 0;
   color: #fff;
   display: inline-block;
+  font-family: $semibold;
   font-size: 13px;
-  font-weight: bold;
+  letter-spacing: 1.3px;
   line-height: 1.5;
   padding: 1.25em 2em;
   text-align: center;

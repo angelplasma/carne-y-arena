@@ -3,38 +3,35 @@
 .nav {
   display: flex;
   flex-wrap: wrap;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 16px;
   list-style: none;
   margin: 0 0 0 auto;
   padding: 0;
 
-  &[data-context="header"] {
-    @include breakpoint($mobile-nav) {
-      background: color(red);
-      flex-wrap: wrap;
-      left: 0;
-      justify-content: space-around;
-      position: absolute;
-      right: 40px;
-      z-index: 200;
+  @include breakpoint($mobile-nav) {
+    background: color(red);
+    flex-wrap: wrap;
+    left: 0;
+    justify-content: space-around;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    z-index: 200;
 
-      transform: translateY(-100%);
-      transition: transform 0.3s ease-in-out;
-      will-change: transform;
-
-      &[data-open=true] {
-        transform: translateY(0);
-      }
+    &[data-open=true] {
+      transform: translateY(0);
     }
+  }
 
-    @include breakpoint($desktop-nav) {
-      margin-right: 150px;
-    }
+  @include breakpoint($desktop-nav) {
+    margin-right: 210px;
+  }
 
-    @include breakpoint(large-desktop-up) {
-      margin-right: 180px;
-    }
+  @include breakpoint(large-desktop-up) {
+    margin-right: 180px;
   }
 
   li {
@@ -49,7 +46,7 @@
     }
 
     @include breakpoint(large-desktop-up) {
-      margin: 0 35px;
+      margin: 0 25px;
     }
   }
 }
@@ -59,26 +56,11 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  [data-context="header"] & {
-    @include breakpoint($mobile-nav) {
-      color: color(offwhite);
-      padding: 5vw;
-    }
-
-    @include breakpoint($desktop-nav) {
-      color: color(tan2);
-      padding: 0.5em;
-    }
+  @include breakpoint($mobile-nav) {
+    padding: 5vw;
   }
 
-  .inverse & {
-    @include breakpoint($desktop-nav) {
-      color: color(offwhite);
-    }
-  }
-
-  [data-context="panel"] & {
-    color: color(offwhite);
+  @include breakpoint($desktop-nav) {
     padding: 0.5em;
   }
 
@@ -110,30 +92,18 @@
 
 .number {
   display: inline-block;
-  margin-bottom: 0.5em;
 
-  @include breakpoint($desktop-nav) {
-    margin: -0.5em;
-    padding: 0.5em;
-  }
-
-  @include breakpoint(large-tablet-up) {
+  @include breakpoint($mobile-nav) {
     margin-bottom: 0.5em;
   }
 
-  .active & {
-    @include breakpoint($desktop-nav) {
-      color: color(red);
-    }
-  }
+  @include breakpoint($desktop-nav) {
+    padding: 0.5em;
 
-  .inverse & {
-    color: color(offwhite);
-  }
-
-  .nav:not(.inverse) & {
-    @include breakpoint($desktop-nav) {
-      color: color(red);
+    // override specificity
+    &[class] {
+      margin-top: -0.5em;
+      margin-left: -0.5em;
     }
   }
 
@@ -153,10 +123,6 @@
         will-change: transform;
         width: 141.4213%; // diagonal length = width * √2
         z-index: 10;
-
-        .inverse & {
-          border-bottom-color: color(offwhite);
-        }
       }
     }
   }
@@ -168,14 +134,12 @@
       }
     }
   }
-
-  [data-context="panel"] & {
-    color: red;
-  }
 }
 
 .line {
   display: block;
+  font-family: $semibold;
+  letter-spacing: 1.6px;
 
   @include breakpoint(small-tablet-down) {
     margin-right: 0.6ch; // approximately the width of the space character

@@ -13,15 +13,14 @@
   }
 
   @include breakpoint(large-desktop-up) {
-    padding: 320px 20px 0;
+    padding: 270px 20px;
   }
 }
 
 .intro {
-  color: color(offwhite);
+  font-family: $semibold;
   font-size: (18/320) * 100vw;
-  font-weight: bold;
-  line-height: 1.4;
+  line-height: 1.5;
   margin: auto;
 
   @include breakpoint(large-tablet-up) {
@@ -31,15 +30,11 @@
 
   @include breakpoint(large-desktop-up) {
     font-size: 45px;
-    max-width: 820px;
+    max-width: 920px;
   }
 
   b {
     color: color(red);
-  }
-
-  span {
-    display: block;
   }
 }
 

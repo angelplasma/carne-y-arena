@@ -2,14 +2,15 @@
 // e.g. variables, functions and mixins
 
 @import 'variables/_breakpoints';
-@import 'variables/_dimensions';
 @import 'variables/_colors';
+@import 'variables/_other';
 
 @import 'functions/_bp';
 @import 'functions/_color';
 @import 'functions/_str-replace';
 
 @import 'mixins/_breakpoint';
+@import 'mixins/_font-face';
 @import 'mixins/_placeholder';
 @import 'mixins/_smooth';
 

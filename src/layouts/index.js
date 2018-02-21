@@ -16,7 +16,7 @@ const TemplateWrapper = ({ data, children, location }) => (
         },
       ]}
     />
-    <Header pathname={location.pathname} />
+    <Header />
     <main>
       {children()}
     </main>

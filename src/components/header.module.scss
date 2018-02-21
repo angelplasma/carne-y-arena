@@ -8,14 +8,12 @@
   width: 100%;
 
   @include breakpoint($desktop-nav) {
-    padding: 20px 40px;
+    padding: 15px 40px;
   }
 }
 
 .title {
-  color: color(tan2);
-  font-style: italic;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: bold;
   padding: 0.5em;
   text-decoration: none;
@@ -25,31 +23,24 @@
     transform: scale(0.6);
   }
 
-  &.inverse {
-    color: color(offwhite);
-  }
-
   span {
     display: block;
   }
 }
 
 .line1 {
-  font-size: 13px;
+  font-size: 16px;
+  font-style: italic;
 }
 
 .line2 {
+  font-family: $semibold;
   text-transform: uppercase;
 
   b {
-    color: color(tan2);
+    color: rgba(color(offwhite), 0.6);
+    font-family: $regular;
     font-weight: normal;
-  }
-
-  .inverse & {
-    b {
-      color: rgba(color(offwhite), 0.6);
-    }
   }
 }
 
@@ -57,6 +48,7 @@
   background: color(red);
   border: 0;
   height: 40px;
+  margin-bottom: auto;
   margin-left: auto;
   width: 40px;
 
@@ -95,7 +87,7 @@
   width: 120px;
 
   @include breakpoint($desktop-nav) {
-    width: 135px;
+    width: 170px;
   }
 
   li {
@@ -142,10 +134,14 @@
   width: 100%;
 
   @include breakpoint($mobile-nav) {
+    font-size: 13px;
+    letter-spacing: 1.3px;
     padding: 10px 12px 12px;
   }
 
   @include breakpoint($desktop-nav) {
+    font-size: 16px;
+    letter-spacing: 1.6px;
     padding: 12px 18px 18px;
   }
 }
@@ -179,12 +175,13 @@
   background: #fff;
   color: color(red);
   display: flex;
+  letter-spacing: 1.6px;
   line-height: 1.5;
   flex-basis: 400px;
   flex-grow: 1;
 
   span {
-    font-weight: bold;
+    font-family: $semibold;
     font-style: italic;
   }
 }
@@ -199,6 +196,7 @@
   color: rgba(#fff, 0.8);
   display: flex;
   flex: 1;
+  font-family: $semibold;
   font-style: italic;
   justify-content: center;
   padding: 20px;

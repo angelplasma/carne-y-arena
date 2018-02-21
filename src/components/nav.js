@@ -1,21 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import classNames from 'classnames/bind'
 
 import styles from './nav.module.scss'
 
-const cx = classNames.bind(styles);
-
 class Nav extends React.Component {
   render() {
-    const {pathname, ...htmlAttrs} = this.props
-    const navClassName = cx({
-      nav: true,
-      inverse: pathname === '/',
-    });
-
     return (
-      <ul id="header-menu" className={navClassName} {...htmlAttrs}>
+      <ul id="header-menu" styleName="nav" {...this.props}>
         <li>
           <Link to="about" styleName="link" activeClassName={styles.active}>
             <span styleName="number">01</span>
