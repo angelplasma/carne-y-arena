@@ -4,12 +4,62 @@
   padding: 120px 0 20px;
 
   @include breakpoint($desktop-nav) {
+    display: flex;
     margin: auto;
-    max-width: 1000px;
-    padding-top: 200px;
+    max-width: 1050px;
+    padding: 200px 0 0;
   }
 }
 
-.content {
+.location {
+  color: rgba(#fff, 0.7);
   max-width: 500px;
+
+  @include breakpoint($mobile-nav) {
+    margin: 0 auto 50px;
+  }
+}
+
+.directions {
+  margin: auto;
+  max-width: 500px;
+  padding-left: 100px;
+  position: relative;
+
+  @include breakpoint($desktop-nav) {
+    width: 45vw;
+  }
+}
+
+.title {
+  font-family: $semibold;
+  font-size: 18px;
+}
+
+.address {
+  font-family: $extrabolditalic;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+
+  @include breakpoint(small-tablet-up) {
+    font-size: 38px;
+  }
+}
+
+.transportation-type {
+  font-family: $semibold;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.transportation-text {
+  margin-bottom: 4em;
+  margin-top: 0.5em;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  transform: translateY(-2em);
 }
