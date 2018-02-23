@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import { SUPPORTS_WEBP } from '../../lib/webp'
+import { TICKETS_URL } from '../../lib/constants'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import './index.scss'
@@ -12,8 +12,8 @@ const TemplateWrapper = ({ data, children, location }) => (
     <Helmet
       htmlAttributes={{
         lang: 'en',
-        class: location.pathname === '/' ? 'home' : '',
-        'data-webp': SUPPORTS_WEBP ? 'true' : 'false'
+        itemscope: undefined,
+        itemtype: `http://schema.org/WebSite`,
       }}
       title={data.site.siteMetadata.title}
       meta={[
@@ -21,6 +21,36 @@ const TemplateWrapper = ({ data, children, location }) => (
           name: 'description',
           content: data.site.siteMetadata.description,
         },
+      ]}
+      script={[
+        {
+          type: 'application/ld+json',
+          innerHTML: `{
+            '@context': 'http://schema.org/',
+            '@type': 'ExhibitionEvent',
+            'name': 'Carne y Arena',
+            'director': 'Alejandro G. Iñárritu',
+            'startDate': '2018-03-09',
+            'endDate': '2018-03-31',
+            'description': '${data.site.siteMetadata.description}',
+            'location': {
+              '@type': 'Place',
+              'name': 'Trinidad Baptist Church',
+              'address': {
+                '@type': 'PostalAddress',
+                'addressLocality': 'Washington',
+                'addressRegion': 'DC',
+                'postalCode': '20002',
+                'streetAddress': '1611 Benning Rd NE'
+              },
+              'hasMap': 'https://www.google.com/maps/place/1611+Benning+Rd+NE,+Washington,+DC+20002'
+            },
+            'offers': {
+              '@type': 'Offer',
+              'url': '${TICKETS_URL}'
+            },
+          }`
+        }
       ]}
     />
     <Header />
