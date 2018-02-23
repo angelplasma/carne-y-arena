@@ -99,7 +99,7 @@ class Header extends React.Component {
           </span>
         </Link>
 
-        <Nav data-open={this.state.mobileNavOpen} />
+        <Nav onClick={this.toggleMobileNav} data-open={this.state.mobileNavOpen} />
 
         <div styleName="utility" data-open={this.state.utilityOpen}>
           <ul styleName="tag">

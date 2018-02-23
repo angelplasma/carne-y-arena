@@ -36,3 +36,19 @@
     color: color(red);
   }
 }
+
+:global {
+  .home {
+    min-height: 100%;
+
+    &[data-webp="true"] {
+      background: url('../images/bg-q50-s10.webp') no-repeat;
+      background-size: cover;
+    }
+
+    &[data-webp="false"] {
+      background: url('../images/bg-q60-s10.jpeg') no-repeat;
+      background-size: cover;
+    }
+  }
+}
