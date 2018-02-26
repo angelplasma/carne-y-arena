@@ -6,17 +6,7 @@
   @include breakpoint($desktop-nav) {
     margin: auto;
     max-width: 1360px;
-    padding-top: 200px;
-  }
-}
-
-.intro {
-  margin: 0 auto 50px;
-  max-width: 600px;
-  text-align: center;
-
-  @include breakpoint($desktop-nav) {
-    margin-bottom: 100px;
+    padding-top: 260px;
   }
 }
 
@@ -80,23 +70,24 @@
   }
 
   @include breakpoint(large-desktop-up) {
-    padding: 120px 40px;
+    padding: 100px 40px;
 
     &:nth-child(6n+1),
     &:nth-child(6n+5) {
       grid-column: span 2;
-      padding-left: 200px;
-      padding-right: 200px;
+      padding-left: 155px;
+      padding-right: 155px;
     }
   }
-}
 
-.inner {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 250px;
+  strong {
+    font-family: $semibold;
+    font-size: 20px;
+
+    @include breakpoint(small-tablet-up) {
+      font-size: 25px;
+    }
+  }
 }
 
 .icon {
