@@ -48,8 +48,8 @@ const LocationPage = () => (
       <img src={carIcon} alt="" styleName="icon" />
       <p styleName="transportation-text">
          Benning Road Northeast and 16th Street NE (immediately passed the H
-        Street Corridor and in front of Hechinger Mall). Limited parking
-        available on site.
+        Street Corridor and in front of Hechinger Mall). <b>Limited parking
+        available on site.</b>
       </p>
     </div>
   </div>
