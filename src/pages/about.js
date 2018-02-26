@@ -36,7 +36,7 @@ const AboutPage = () => (
         feet, under their skin, and into their hearts.”
       </p>
 
-      <a href={TICKETS_URL} className="button" rel="noopener">Get Tickets</a>
+      <a href={TICKETS_URL} className="button" rel="noopener">Reserve Your Space</a>
     </div>
 
     <aside styleName="background">

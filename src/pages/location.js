@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { DIRECTIONS_URL } from '../../lib/constants'
+import { TICKETS_URL } from '../../lib/constants'
 import styles from './location.module.scss'
 import metroIcon from '../images/metro.svg'
 import busIcon from '../images/bus.svg'
@@ -16,7 +16,7 @@ const LocationPage = () => (
         Washington, DC 20002
       </address>
 
-      <a href={DIRECTIONS_URL} className="button" rel="noopener">Get Directions</a>
+      <a href={TICKETS_URL} className="button" rel="noopener">Reserve Your Space</a>
     </div>
 
     <div styleName="directions">
