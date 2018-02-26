@@ -9,6 +9,10 @@
     max-width: 1050px;
     padding: 200px 0 0;
   }
+
+  @include breakpoint(large-desktop-up) {
+    padding-top: 300px;
+  }
 }
 
 .location {
@@ -65,5 +69,5 @@
 .icon {
   position: absolute;
   left: 0;
-  transform: translateY(-2em);
+  transform: translateY(-1em);
 }

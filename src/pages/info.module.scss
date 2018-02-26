@@ -6,6 +6,10 @@
   @include breakpoint($desktop-nav) {
     margin: auto;
     max-width: 1360px;
+    padding-top: 200px;
+  }
+
+  @include breakpoint(large-desktop-up) {
     padding-top: 260px;
   }
 }
