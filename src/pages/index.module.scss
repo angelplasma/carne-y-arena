@@ -24,7 +24,6 @@
 
 .line1 {
   display: block;
-  font-style: italic;
 
   @include breakpoint(large-tablet-down) {
     font-size: (14/320) * 100vw; // 14px

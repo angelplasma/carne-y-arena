@@ -5,6 +5,7 @@ import styles from './location.module.scss'
 import metroIcon from '../images/metro.svg'
 import busIcon from '../images/bus.svg'
 import carIcon from '../images/car.svg'
+import streetcarIcon from '../images/streetcar.svg'
 
 const LocationPage = () => (
   <div styleName="container">
@@ -20,25 +21,35 @@ const LocationPage = () => (
     </div>
 
     <div styleName="directions">
-      <h2 styleName="transportation-type">By Metro:</h2>
-      <img src={metroIcon} alt="" styleName="icon" />
-      <p styleName="transportation-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla adipisci
-        minus, excepturi eveniet facilis numquam quos culpa.
-      </p>
-
       <h2 styleName="transportation-type">By Bus:</h2>
       <img src={busIcon} alt="" styleName="icon" />
       <p styleName="transportation-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam veritatis
-        consequatur autem reiciendis iure inventore magni dolores.
+        Accessible via X1, X2, X3 and X9 buses.
+      </p>
+
+      <h2 styleName="transportation-type">By Metro:</h2>
+      <img src={metroIcon} alt="" styleName="icon" />
+      <p styleName="transportation-text">
+        Take Orange line to New Carrollton and get off at Stadium-Armory Station
+        to pick up the B2 bus to MT Rainier, get off at 15th St. NE & Benning Rd
+        NE and it will be a 3 minute walk to exhibit.
+      </p>
+
+      <h2 styleName="transportation-type">By Streetcar:</h2>
+      <img src={streetcarIcon} alt="" styleName="icon" />
+      <p styleName="transportation-text">
+         From Union Station, take the DC Streetcar at H Street & 3rd Street
+        NE towards Benning Road. Exit at Benning Road & 15th Street NE stop.
+        From there it will be a 2 minute walk to the exhibit. The DC Streetcar
+        is free.
       </p>
 
       <h2 styleName="transportation-type">By Car:</h2>
       <img src={carIcon} alt="" styleName="icon" />
       <p styleName="transportation-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi a libero
-        placeat nostrum ullam, quo laudantium veritatis in perferendis.
+         Benning Road Northeast and 16th Street NE (immediately passed the H
+        Street Corridor and in front of Hechinger Mall). Limited parking
+        available on site.
       </p>
     </div>
   </div>
