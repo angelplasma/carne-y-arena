@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import { TICKETS_URL } from '../../lib/constants'
@@ -53,6 +52,7 @@ const TemplateWrapper = ({ data, children, location }) => (
         }
       ]}
     />
+
     <Header />
 
     <main>

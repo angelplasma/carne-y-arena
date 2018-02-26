@@ -9,62 +9,17 @@
   z-index: 500;
 
   @include breakpoint($desktop-nav) {
-    padding: 15px 40px;
-  }
-}
-
-.title {
-  text-decoration: none;
-
-  @include breakpoint($mobile-nav) {
-    padding: 0.5em;
-    font-size: 18px;
+    min-height: 150px;
+    padding: 0 120px 0 0;
   }
 
-  @include breakpoint($desktop-nav) {
-    font-size: 38px;
-  }
-
-  span {
-    display: block;
-  }
-}
-
-.line1 {
-  font-style: italic;
-
-  @include breakpoint($mobile-nav) {
-    font-size: 12px;
-    font-size: 3.75vw;
-  }
-
-  @include breakpoint(small-tablet-up) {
-    font-size: 16px;
-  }
-}
-
-.line2 {
-  font-family: $semibold;
-  text-transform: uppercase;
-
-  @include breakpoint($mobile-nav) {
-    font-size: 18px;
-    font-size: 5.625vw;
-  }
-
-  @include breakpoint(small-tablet-up) {
-    font-size: 38px;
-  }
-
-  b {
-    color: rgba(color(offwhite), 0.6);
-    font-family: $regular;
-    font-weight: normal;
+  @media (min-width: 1000px) {
+    padding: 0;
   }
 }
 
 .menu-button {
-  background: color(red);
+  background: transparent;
   border: 0;
   flex-shrink: 0;
   height: 40px;
@@ -99,30 +54,28 @@
 }
 
 .tag {
-  background: color(red);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 0;
   position: absolute;
   right: 40px;
   top: 100%;
-  width: 115px;
 
   @include breakpoint($desktop-nav) {
-    width: 170px;
+    padding: 55px 20px 20px 20px;
+    right: 0;
+  }
+
+  [data-open=true] & {
+    background: color(red);
   }
 
   li {
     display: flex;
     font-size: 13px;
     margin: 0;
-
-    &:last-child {
-      width: 100%;
-    }
   }
 
   button {
@@ -138,47 +91,15 @@
 
 .icon-link {
   display: flex;
-
-  @include breakpoint($mobile-nav) {
-    height: 40px;
-    padding: 0;
-    width: 40px;
-  }
-
-  @include breakpoint($desktop-nav) {
-    padding: 12px;
-    width: 100%;
-  }
-}
-
-.text-link {
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
-
-  @include breakpoint($mobile-nav) {
-    font-size: 13px;
-    letter-spacing: 1.3px;
-    padding: 10px 10px 12px;
-  }
-
-  @include breakpoint($desktop-nav) {
-    font-size: 16px;
-    letter-spacing: 1.6px;
-    padding: 12px 18px 18px;
-  }
+  height: 40px;
+  padding: 0;
+  width: 40px;
 }
 
 .subscribe-outer {
   background: color(red);
   display: flex;
   width: 100%;
-
-  @include breakpoint($desktop-nav) {
-    height: 185px;
-  }
 }
 
 .subscribe-inner {

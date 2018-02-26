@@ -1,39 +1,99 @@
 @import '../styles/setup';
 
 .container {
-  padding: 100px 6.25vw 50px;
+  padding: 100px 0 50px;
+  text-align: center;
 
   @include breakpoint(large-mobile-up) {
-    padding: 25vw 10vw;
+    padding: 25vw 0;
   }
 
   @include breakpoint(large-tablet-up) {
-    padding: ((320/$max-breakpoint) * 100vw) 30px;
+    padding: ((320/$max-breakpoint) * 100vw) 0;
   }
 
   @include breakpoint(large-desktop-up) {
-    padding: 270px 20px;
+    padding: 270px 0;
   }
 }
 
-.intro {
+.title {
   font-family: $semibold;
-  font-size: (18/320) * 100vw;
-  line-height: 1.5;
-  margin: auto;
+  margin: 0;
+}
 
-  @include breakpoint(large-tablet-up) {
-    font-size: (45/$max-breakpoint) * 100vw;
-    max-width: (820/$max-breakpoint) * 100vw;
+.line1 {
+  display: block;
+  font-style: italic;
+
+  @include breakpoint(large-tablet-down) {
+    font-size: (14/320) * 100vw; // 14px
   }
 
-  @include breakpoint(large-desktop-up) {
-    font-size: 45px;
-    max-width: 920px;
+  @include range(small-tablet-up, large-tablet-down) {
+    font-size: (26/840) * 100vw; // 26px
+  }
+
+  @include breakpoint(small-desktop-up) {
+    font-size: 36px;
+  }
+}
+
+.line2 {
+  display: block;
+  text-transform: uppercase;
+
+  @include breakpoint(large-tablet-down) {
+    font-size: (36/320) * 100vw; // 36px
+  }
+
+  @include range(small-tablet-up, large-tablet-down) {
+    font-size: (72/840) * 100vw; // 72px
+  }
+
+  @include breakpoint(small-desktop-up) {
+    font-size: 98px;
   }
 
   b {
-    color: color(red);
+    color: rgba(color(offwhite), 0.7);
+    font-family: $regular;
+    font-weight: normal;
+  }
+}
+
+.tagline {
+  font-size: 14px;
+  margin-top: 0;
+
+  @include breakpoint(large-mobile-up) {
+    font-size: 18px;
+  }
+
+  @include breakpoint(small-desktop-up) {
+    font-size: 30px;
+  }
+}
+
+.summary {
+  font-family: $semibold;
+  font-size: (18/320) * 100vw;
+  line-height: 1.5;
+  margin: 0 auto 1.5em;
+
+  @include breakpoint(small-tablet-up) {
+    font-size: 4vw;
+    max-width: 80vw;
+  }
+
+  @include breakpoint(small-desktop-up) {
+    font-size: (35/$max-breakpoint) * 100vw;
+    max-width: (920/$max-breakpoint) * 100vw;
+  }
+
+  @include breakpoint(large-desktop-up) {
+    font-size: 35px;
+    max-width: 920px;
   }
 }
 

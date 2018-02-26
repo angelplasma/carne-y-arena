@@ -1,18 +1,15 @@
 @import '../styles/setup';
 
 .nav {
-  display: flex;
-  flex-wrap: wrap;
   font-size: 16px;
   list-style: none;
-  margin: 0 0 0 auto;
+  margin: 0;
   padding: 0;
 
   @include breakpoint($mobile-nav) {
     background: color(red);
-    flex-wrap: wrap;
     left: 0;
-    justify-content: space-around;
+    padding: 10px 0;
     position: absolute;
     right: 40px;
     top: 0;
@@ -26,13 +23,17 @@
     }
   }
 
-  @include breakpoint($desktop-nav) {
-    margin-right: 210px;
+  @include range(small-tablet-up, $mobile-nav) {
+    padding: 10px;
   }
 
-  @include breakpoint(large-desktop-up) {
-    margin-right: 180px;
+  @include breakpoint(small-tablet-up) {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    text-align: center;
   }
+
 
   li {
     margin: 0;
@@ -53,95 +54,41 @@
 
 .link {
   display: block;
-  text-transform: uppercase;
+  font-family: $semibold;
+  letter-spacing: 1.6px;
   text-decoration: none;
+  text-transform: uppercase;
 
   @include breakpoint($mobile-nav) {
-    padding: 5vw;
+    padding: 15px;
   }
 
   @include breakpoint($desktop-nav) {
-    padding: 0.5em;
+    padding: 0.6em;
   }
 
   @include breakpoint($desktop-nav) {
     position: relative;
 
     &:after {
-      border-bottom: 1px solid color(red);
+      border-bottom: 5px solid #D66061;
       bottom: 0;
-      left: 0;
       content: '';
       display: block;
+      margin-top: -10px;
       position: absolute;
-      transition: transform 0.2s ease-in-out;
-      transform-origin: 0 100%;
-      transform: rotate(-45deg) scaleX(0);
+      transform: scaleX(0);
+      transition: transform 0.15s ease-in-out;
+      width: calc(100% - 1.2em);
       will-change: transform;
-      width: 100px;
-      z-index: -1;
     }
   }
 }
 
 .active {
-  &:after {
-    transform: rotate(-45deg) scaleX(1);
-  }
-}
-
-.number {
-  display: inline-block;
-
-  @include breakpoint($mobile-nav) {
-    margin-bottom: 0.5em;
-  }
-
   @include breakpoint($desktop-nav) {
-    padding: 0.5em;
-
-    // override specificity
-    &[class] {
-      margin-top: -0.5em;
-      margin-left: -0.5em;
+    &:after {
+      transform: scaleX(1);
     }
-  }
-
-  .link:not(.active) & {
-    @include breakpoint($desktop-nav) {
-      position: relative;
-
-      &:after {
-        border-bottom: 1px solid color(red);
-        content: '';
-        left: 0;
-        position: absolute;
-        top: 0;
-        transition: transform 0.15s ease-in-out;
-        transform-origin: 0 0;
-        transform: rotate(45deg) scaleX(0);
-        will-change: transform;
-        width: 141.4213%; // diagonal length = width * √2
-        z-index: 10;
-      }
-    }
-  }
-
-  .link:not(.active):hover & {
-    @include breakpoint($desktop-nav) {
-      &:after {
-        transform: rotate(45deg) scaleX(1);
-      }
-    }
-  }
-}
-
-.line {
-  display: block;
-  font-family: $semibold;
-  letter-spacing: 1.6px;
-
-  @include breakpoint(small-tablet-down) {
-    margin-right: 0.6ch; // approximately the width of the space character
   }
 }

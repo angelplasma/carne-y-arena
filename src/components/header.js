@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import { TICKETS_URL } from '../../lib/constants'
 import Nav from './nav'
 import SubscribeFrom from './subscribe'
 import styles from './header.module.scss'
@@ -92,12 +91,9 @@ class Header extends React.Component {
   render() {
     return (
       <header styleName="header">
-        <Link to="/" styleName="title">
-          <span styleName="line1">Alejandro G. Iñárritu’s</span>
-          <span styleName="line2">
-            Carne <b>y</b> Arena
-          </span>
-        </Link>
+        <button ref="mobileNavButton" onClick={this.toggleMobileNav} styleName="menu-button">
+          <img src={menuIcon} alt="" title="Menu" />
+        </button>
 
         <Nav onClick={this.toggleMobileNav} data-open={this.state.mobileNavOpen} />
 
@@ -114,20 +110,12 @@ class Header extends React.Component {
                 <img src={pinIcon} alt="" title="View Location" />
               </Link>
             </li>
-
-            <li>
-              <a href={TICKETS_URL} styleName="text-link" rel="noopener">Get Tickets</a>
-            </li>
           </ul>
 
           <div id="subscribe-panel" styleName="subscribe-outer" aria-hidden={!this.state.utilityOpen}>
             {!this.state.responseMessage ? this.renderSignupForm() : this.renderSignupDone()}
           </div>
         </div>
-
-        <button ref="mobileNavButton" onClick={this.toggleMobileNav} styleName="menu-button">
-          <img src={menuIcon} alt="" title="Menu" />
-        </button>
       </header>
     )
   }
