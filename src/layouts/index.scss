@@ -1,5 +1,4 @@
 @import '../styles/setup';
-@import-normalize;
 
 @include font-face('gilroy-regular', 'gilroy-regular-webfont');
 @include font-face('gilroy-semibold', 'gilroy-semibold-webfont');
@@ -10,6 +9,8 @@ html {
   color: color(offwhite);
   box-sizing: border-box;
   font-family: $regular;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 
   @include breakpoint(medium-desktop-up) {
     font-size: 18px;
@@ -37,6 +38,7 @@ body {
 }
 
 main {
+  display: block;
   padding-left: 20px;
   padding-right: 20px;
 
