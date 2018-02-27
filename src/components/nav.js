@@ -9,13 +9,13 @@ class Nav extends React.Component {
     return (
       <ul id="header-menu" styleName="nav" {...this.props}>
         <li>
-          <Link to="about" styleName="link" activeClassName={styles.active}>
+          <Link to="/about" styleName="link" activeClassName={styles.active}>
             About the Exhibition
           </Link>
         </li>
 
         <li>
-          <Link to="info" styleName="link" activeClassName={styles.active}>
+          <Link to="/info" styleName="link" activeClassName={styles.active}>
             Additional Information
           </Link>
         </li>
