@@ -38,7 +38,7 @@ const LocationPage = () => (
       <h2 styleName="transportation-type">By Streetcar:</h2>
       <img src={streetcarIcon} alt="" styleName="icon" />
       <p styleName="transportation-text">
-         From Union Station, take the DC Streetcar at H Street & 3rd Street
+        From Union Station, take the DC Streetcar at H Street & 3rd Street
         NE towards Benning Road. Exit at Benning Road & 15th Street NE stop.
         From there it will be a 2 minute walk to the exhibit. The DC Streetcar
         is free.
@@ -47,7 +47,7 @@ const LocationPage = () => (
       <h2 styleName="transportation-type">By Car:</h2>
       <img src={carIcon} alt="" styleName="icon" />
       <p styleName="transportation-text">
-         Benning Road Northeast and 16th Street NE (immediately passed the H
+        Benning Road Northeast and 16th Street NE (immediately passed the H
         Street Corridor and in front of Hechinger Mall). <b>Limited parking
         available on site.</b>
       </p>

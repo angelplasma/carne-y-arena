@@ -25,7 +25,7 @@ const IndexPage = () => (
 
       <p styleName="summary">
         This groundbreaking and immersive virtual reality exhibit
-        is unlike anything you’ve experienced before. 
+        is unlike anything you’ve experienced before.
       </p>
 
       <a href={TICKETS_URL} className="button" rel="noopener">Reserve Your Space</a>

@@ -13,7 +13,7 @@ const AboutPage = () => (
 
     <div styleName="content">
       <p>
-        <b>Alejandro G. Iñárritu’s conceptual virtual reality installation  CARNE
+        <b>Alejandro G. Iñárritu’s conceptual virtual reality installation CARNE
         y ARENA</b> (Virtually present, Physically invisible) explores the human
         condition of immigrants and refugees. Based on true accounts, the
         superficial lines between subject and bystander are blurred and bound
