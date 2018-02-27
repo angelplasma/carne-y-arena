@@ -5,12 +5,16 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
-      resolve: `gatsby-plugin-react-css-modules`,
+      resolve: 'gatsby-plugin-react-css-modules',
       options: {
         filetypes: {
-          '.scss': { syntax: 'postcss-scss' },
+          '.scss': {
+            syntax: 'postcss-scss',
+            plugins: [
+              'autoprefixer'
+            ]
+          },
         },
         exclude: '\/global\/',
       },

@@ -1,0 +1,15 @@
+# Browsers that we support. This informs autoprefixer and
+# babel-preset-env, which apply code transformations to ensure CSS and
+# JavaScript can run in our target environments.
+#
+# Also see:
+# https://caniuse.com/usage-table
+
+# Latest version of each browser
+last 1 version
+
+# First browsers to support CSS Grid
+Edge >= 16
+Chrome >= 57
+Firefox >= 52
+Safari >= 10.1
