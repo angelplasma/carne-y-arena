@@ -18,7 +18,7 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', this.handleEscapeKey, false);
+    document.addEventListener('keydown', this.handleEscapeKey, false)
   }
 
   changeView = ({status, message}) => {
