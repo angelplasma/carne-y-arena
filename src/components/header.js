@@ -40,7 +40,7 @@ class Header extends React.Component {
 
   renderResetButton() {
     return (
-      <button styleName="reset-button" onClick={this.resetForm}>Please try again.</button>
+      <button styleName="reset-button" onClick={this.resetForm}>Please try again</button>
     )
   }
 
@@ -67,7 +67,7 @@ class Header extends React.Component {
       <div styleName="subscribe-done">
         <p>
           {this.state.responseMessage}
-          {this.state.responseStatus == 'error' ? this.renderResetButton() : null}
+          {this.state.responseStatus == 'error' ? this.renderResetButton() : null}.
         </p>
       </div>
     )
