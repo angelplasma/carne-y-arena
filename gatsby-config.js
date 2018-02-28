@@ -19,5 +19,11 @@ module.exports = {
         exclude: '\/global\/',
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-NJFQJZJ',
+      },
+    },
   ],
 };

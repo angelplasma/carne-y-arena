@@ -21,6 +21,11 @@ class SubscribeForm extends React.Component {
     })
   }
 
+  track() {
+    const dataLayer = window.dataLayer = window.dataLayer || []
+    dataLayer.push({'event': 'email signup'})
+  }
+
   handleSubmit = event => {
     event.preventDefault()
 
@@ -38,6 +43,7 @@ class SubscribeForm extends React.Component {
             status: 'success',
             message: 'You are subscribed, thank you!'
           })
+          this.track()
         } else {
           var alreadySubscribed = data.msg.indexOf('already subscribed') > -1
           this.setState({
