@@ -166,3 +166,14 @@
   padding: 0;
   text-decoration: underline;
 }
+
+.close-button {
+  background: transparent;
+  border: 0;
+  height: 40px;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+}

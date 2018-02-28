@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import Nav from './nav'
 import SubscribeFrom from './subscribe'
 import styles from './header.module.scss'
+import closeIcon from '../images/close.svg'
 import emailIcon from '../images/email.svg'
 import menuIcon from '../images/menu.svg'
 import pinIcon from '../images/pin.svg'
@@ -38,6 +39,14 @@ class Header extends React.Component {
     }
   }
 
+  renderCloseButton() {
+    return (
+      <button onClick={this.toggleUtility} aria-controls="subscribe-panel" aria-expanded={this.state.utilityOpen} styleName="close-button">
+        <img src={closeIcon} alt="" title="Close" />
+      </button>
+    )
+  }
+
   renderResetButton() {
     return (
       <span>
@@ -59,6 +68,7 @@ class Header extends React.Component {
 
         <div styleName="subscribe-form">
           <SubscribeFrom onDone={this.changeView} />
+          {this.renderCloseButton()}
         </div>
       </div>
     )
@@ -69,7 +79,7 @@ class Header extends React.Component {
       <div styleName="subscribe-done">
         <p>
           {this.state.responseMessage}
-          {this.state.responseStatus == 'error' ? this.renderResetButton() : null}
+          {this.state.responseStatus == 'error' ? this.renderResetButton() : this.renderCloseButton()}
         </p>
       </div>
     )
@@ -87,6 +97,7 @@ class Header extends React.Component {
   }
 
   toggleUtility = () => {
+    this.resetForm()
     this.setState({ utilityOpen: !this.state.utilityOpen })
   }
 
