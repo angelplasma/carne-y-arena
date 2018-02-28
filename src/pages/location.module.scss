@@ -1,17 +1,14 @@
 @import '../styles/setup';
 
 .container {
-  padding: 120px 0 20px;
-
   @include breakpoint($desktop-nav) {
     display: flex;
     margin: auto;
     max-width: 1050px;
-    padding: 200px 0 0;
   }
 
   @include breakpoint(large-desktop-up) {
-    padding-top: 300px;
+    padding-top: 70px;
   }
 }
 

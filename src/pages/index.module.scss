@@ -1,19 +1,19 @@
 @import '../styles/setup';
 
 .container {
-  padding: 100px 0 50px;
+  padding: 60px 0 50px;
   text-align: center;
 
   @include breakpoint(large-mobile-up) {
-    padding: 25vw 0;
+    padding: 16vw 0 25vw;
   }
 
   @include breakpoint(large-tablet-up) {
-    padding: ((320/$max-breakpoint) * 100vw) 0;
+    padding: 20vw 0 25vw;
   }
 
   @include breakpoint(large-desktop-up) {
-    padding: 270px 0;
+    padding: 120px 0 270px;
   }
 }
 

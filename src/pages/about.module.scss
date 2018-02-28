@@ -3,13 +3,11 @@
 $max-quote-width: 1100px;
 
 .container {
-  padding: 120px 0 20px;
   position: relative;
 
   @include breakpoint($desktop-nav) {
     margin: auto;
     max-width: $max-quote-width;
-    padding-top: 200px;
   }
 }
 
@@ -22,15 +20,10 @@ $max-quote-width: 1100px;
   }
 
   @media (min-width: $max-quote-width) {
-    padding-top: 100px;
     position: absolute;
     right: 0;
-    top: 120px;
+    top: 100px;
     z-index: 1;
-  }
-
-  @include breakpoint($desktop-nav) {
-    top: 150px;
   }
 }
 

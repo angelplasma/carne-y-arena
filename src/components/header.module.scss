@@ -4,10 +4,6 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 500;
 
   @include breakpoint($desktop-nav) {
     height: 150px;
