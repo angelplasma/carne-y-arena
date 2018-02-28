@@ -25,6 +25,12 @@ class Nav extends React.Component {
             Reserve Your Space
           </a>
         </li>
+
+        <li>
+          <Link to="/location" styleName="link" activeClassName={styles.active}>
+            Location
+          </Link>
+        </li>
       </ul>
     )
   }
