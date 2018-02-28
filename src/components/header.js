@@ -40,7 +40,9 @@ class Header extends React.Component {
 
   renderResetButton() {
     return (
-      <button styleName="reset-button" onClick={this.resetForm}>Please try again</button>
+      <span>
+        <button styleName="reset-button" onClick={this.resetForm}>Please try again</button>.
+      </span>
     )
   }
 
@@ -49,9 +51,9 @@ class Header extends React.Component {
       <div styleName="subscribe-inner">
         <div styleName="subscribe-intro">
           <p>
-            <span>Subscribe to receive notifications about CARNE y ARENA</span>, including
-            when new blocks of tickets are released. Don’t worry, we do not
-            share email or membership information with third parties
+            <span>Subscribe to receive notifications about CARNE y ARENA</span>,
+            including when new blocks of tickets are released. Don’t worry, we
+            do not share email or membership information with third parties.
           </p>
         </div>
 
@@ -67,7 +69,7 @@ class Header extends React.Component {
       <div styleName="subscribe-done">
         <p>
           {this.state.responseMessage}
-          {this.state.responseStatus == 'error' ? this.renderResetButton() : null}.
+          {this.state.responseStatus == 'error' ? this.renderResetButton() : null}
         </p>
       </div>
     )

@@ -33,15 +33,16 @@ class SubscribeForm extends React.Component {
       }, () => jsonp(url, {
         param: "c"
       }, (err, data) => {
-        if (err || data.result !== 'success') {
-          this.setState({
-            status: 'error',
-            message: 'There was a problem signing up.'
-          })
-        } else {
+        if (data.result === 'success') {
           this.setState({
             status: 'success',
             message: 'You are subscribed, thank you!'
+          })
+        } else {
+          var alreadySubscribed = data.msg.indexOf('already subscribed') > -1
+          this.setState({
+            status: alreadySubscribed ? 'duplicate' : 'error',
+            message: alreadySubscribed ? 'You are already signed up with this email address. Thanks!' : 'There was a problem signing up.'
           })
         }
 
