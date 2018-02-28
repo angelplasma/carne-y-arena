@@ -20,7 +20,7 @@ html {
 body {
   margin: 0;
 
-  &::before {
+  html:not(.home) &::before {
     background-image: radial-gradient(circle closest-side, rgba(204, 159, 159, 0.16) 0%, rgba(74, 80, 101, 0) 100%);
     content: '';
     display: block;
