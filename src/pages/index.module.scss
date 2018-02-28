@@ -100,13 +100,13 @@
   .home {
     min-height: 100%;
 
-    &[data-webp="true"] {
-      background: url('../images/bg-q50-s10.webp') no-repeat;
+    &[data-webp="true"] body {
+      background: url('../images/bg-q50-s10.webp') 50% 0 no-repeat;
       background-size: cover;
     }
 
-    &[data-webp="false"] {
-      background: url('../images/bg-q60-s10.jpeg') no-repeat;
+    &[data-webp="false"] body {
+      background: url('../images/bg-q60-s10.jpeg') 50% 0 no-repeat;
       background-size: cover;
     }
   }
