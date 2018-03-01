@@ -11,6 +11,21 @@
 
   @include breakpoint(large-tablet-up) {
     padding: 60px;
+    position: relative;
+  }
+}
+
+.phone {
+  font-family: $semibold;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+
+  @include breakpoint(medium-desktop-up) {
+    margin: 0;
+    position: absolute;
+    right: 60px;
+    top: 60px;
   }
 }
 
