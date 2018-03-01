@@ -91,8 +91,8 @@
     padding-right: 5vw;
 
     @supports (grid-gap: 15px) {
-      &:nth-child(4n+1),
-      &:nth-child(4n+4) {
+      &:first-child,
+      &:nth-child(4) {
         -ms-grid-column-span: 2;
         grid-column: span 2;
         padding-left: 16vw;
@@ -105,8 +105,7 @@
     padding: 100px 40px;
 
     @supports (grid-gap: 15px) {
-      &:nth-child(6n+1),
-      &:nth-child(6n+5) {
+      &:first-child {
         -ms-grid-column-span: 2;
         grid-column: span 2;
         padding-left: 155px;

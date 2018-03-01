@@ -2,11 +2,12 @@ import React from 'react'
 
 import styles from './info.module.scss'
 import backpackIcon from '../images/backpack.svg'
-import eyeIcon from '../images/eye.svg'
 import cameraIcon from '../images/camera.svg'
 import chipIcon from '../images/chip.svg'
 import compassIcon from '../images/compass.svg'
+import eyeIcon from '../images/eye.svg'
 import formIcon from '../images/form.svg'
+import glassesIcon from '../images/glasses.svg'
 
 const InfoPage = () => (
   <div styleName="container">
@@ -41,6 +42,11 @@ const InfoPage = () => (
       <li styleName="box">
         <img src={eyeIcon} alt="" styleName="icon" />
         <span>CARNE y ARENA is not recommended for individuals with claustrophobia, heart conditions, back conditions, a history of seizures, epilepsy, and/or sensitivity to flashing lights.</span>
+      </li>
+
+      <li styleName="box">
+        <img src={glassesIcon} alt="" styleName="icon" />
+        <span>Pack light and wear shoes that are easy to remove. If you have thick eye glass frames, wearing contacts is recommended but not necessary. Along with your shoes, bags and backpacks must be placed in a small locker as you enter.</span>
       </li>
     </ul>
   </div>
