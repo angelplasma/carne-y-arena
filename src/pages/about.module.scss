@@ -1,13 +1,13 @@
 @import '../styles/setup';
 
-$max-quote-width: 1100px;
+$show-quote-background: 'small-desktop-up';
 
 .container {
   position: relative;
 
   @include breakpoint($desktop-nav) {
     margin: auto;
-    max-width: $max-quote-width;
+    max-width: 1020px;
   }
 }
 
@@ -15,40 +15,54 @@ $max-quote-width: 1100px;
   margin: auto;
   max-width: 500px;
 
+  @include breakpoint($show-quote-background) {
+    max-width: 440px;
+  }
+
+  @include breakpoint(medium-desktop-up) {
+    max-width: 500px;
+  }
+
   i {
     font-style: normal;
   }
 
-  @media (min-width: $max-quote-width) {
+  @include breakpoint($show-quote-background) {
     position: absolute;
     right: 0;
-    top: 100px;
+    top: 50px;
     z-index: 1;
   }
 }
 
 .background {
-  @media (max-width: $max-quote-width - 1) {
-    display: none;
+  display: none;
+  margin: auto;
+  user-select: none;
+
+  @include breakpoint($show-quote-background) {
+    display: block;
   }
 
-  @media (min-width: $max-quote-width) {
-    margin: auto;
+  blockquote {
+    color: #A8ACBA;
+    margin: 0;
+    opacity: 0.08;
+    padding: 0;
 
-    blockquote {
-      color: #A8ACBA;
-      opacity: 0.08;
-      padding: 0;
+    p {
+      font-family: $extrabolditalic;
+      font-size: (100/960) * 100vw;
+      line-height: 1;
+      margin-bottom: 0.5em;
 
-      p {
-        font-family: $extrabolditalic;
+      @include breakpoint(medium-desktop-up) {
         font-size: 100px;
-        line-height: 1;
       }
+    }
 
-      i {
-        color: #DB7275;
-      }
+    i {
+      color: #DB7275;
     }
   }
 }
