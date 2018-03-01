@@ -4,6 +4,7 @@ module.exports = {
     description: 'Carne y Arena is a groundbreaking virtual reality installation that allows the viewer to go inside the story and explore the human condition of immigrants and refugees.',
   },
   plugins: [
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-react-css-modules',
