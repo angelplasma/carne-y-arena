@@ -5,7 +5,7 @@
 @include font-face('gilroy-extrabolditalic', 'gilroy-extrabolditalic-webfont');
 
 html {
-  background: #1B2634 linear-gradient(180deg, #495269 0%, rgba(121, 118, 140, 0.24) 65%, rgba(42, 54, 71, 0) 100%) no-repeat;
+  background: #1B2634 linear-gradient(#495269, rgba(121, 118, 140, 0.24) 65%, rgba(42, 54, 71, 0) 100%) no-repeat;
   color: color(offwhite);
   box-sizing: border-box;
   font-family: $regular;

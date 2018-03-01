@@ -107,13 +107,14 @@
   .home {
     min-height: 100%;
 
+    // images optimized with imgix sandbox: https://sandbox.imgix.com/
     &[data-webp="true"] body {
-      background: url('../images/bg-q50-s10.webp') 50% 0 no-repeat;
+      background: url('../images/bg-q50-sharp20.webp') 50% 0 no-repeat;
       background-size: cover;
     }
 
     &[data-webp="false"] body {
-      background: url('../images/bg-q60-s10.jpeg') 50% 0 no-repeat;
+      background: url('../images/bg-q60-sharp10.jpeg') 50% 0 no-repeat;
       background-size: cover;
     }
   }
