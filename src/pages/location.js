@@ -13,8 +13,8 @@ const LocationPage = () => (
       <h1 styleName="title">Carne y Arena Location:</h1>
 
       <address styleName="address">
-        1611 Benning Rd NE<br />
-        Washington, DC 20002
+        1611 Benning Road NE<br />
+        Washington, D.C. 20002
       </address>
 
       <a href={TICKETS_URL} className="button" rel="noopener">Reserve Your Space</a>
@@ -47,8 +47,8 @@ const LocationPage = () => (
       <h2 styleName="transportation-type">By Car:</h2>
       <img src={carIcon} alt="" styleName="icon" />
       <p styleName="transportation-text">
-        Benning Road Northeast and 16th Street NE (immediately passed the H
-        Street Corridor and in front of Hechinger Mall). <b>Limited parking
+        Benning Road NE and 16th St. NE (immediately past the H
+        Street corridor, in front of Hechinger Mall). <b>Limited parking
         available on site.</b>
       </p>
     </div>

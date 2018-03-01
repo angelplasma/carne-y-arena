@@ -30,12 +30,12 @@ const InfoPage = () => (
 
       <li styleName="box">
         <img src={chipIcon} alt="" styleName="icon" />
-        <span>Due to the complex technology employed, the installation may require unplanned maintenance; resulting in delays or cancellation.</span>
+        <span>Due to the complex technology employed, the installation may require unplanned maintenance, resulting in delays or cancellation.</span>
       </li>
 
       <li styleName="box">
         <img src={formIcon} alt="" styleName="icon" />
-        <span>Waiver and release of liability will be available on-site and must be signed before participating. For visitors ages 13 to 17, a guardian must be present to sign the waiver and release of liability at the time of the visit.</span>
+        <span>Waiver and release of liability will be available on-site and must be signed before participating. For visitors ages 14 to 17, a guardian must be present to sign the waiver and release of liability at the time of the visit.</span>
       </li>
 
       <li styleName="box">
