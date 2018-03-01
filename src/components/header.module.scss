@@ -2,15 +2,12 @@
 
 .header {
   align-items: center;
-  justify-content: center;
   display: flex;
+  justify-content: center;
+  padding: 5px;
 
   @include breakpoint($desktop-nav) {
     height: 150px;
-    padding: 0 120px 0 0;
-  }
-
-  @media (min-width: 1000px) {
     padding: 0;
   }
 }

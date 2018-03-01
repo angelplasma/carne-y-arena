@@ -1,7 +1,7 @@
 @import '../styles/setup';
 
 .container {
-  padding: 60px 0 50px;
+  padding: 0 0 130px;
   text-align: center;
 
   @include breakpoint(large-mobile-up) {
@@ -13,12 +13,17 @@
   }
 
   @include breakpoint(large-desktop-up) {
-    padding: 120px 0 270px;
+    padding: 80px 0 180px;
+  }
+
+  @include breakpoint(landscape-large-tablet-down) {
+    padding-top: 0;
   }
 }
 
 .title {
   font-family: $semibold;
+  line-height: 1.1;
   margin: 0;
 }
 
@@ -63,9 +68,11 @@
 
 .tagline {
   font-size: 14px;
+  line-height: 1.75;
   margin-top: 0;
 
   @include breakpoint(large-mobile-up) {
+    @include smooth;
     font-size: 18px;
   }
 

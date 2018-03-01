@@ -45,6 +45,10 @@ main {
     padding-top: 50px;
   }
 
+  @include breakpoint(landscape-large-tablet-down) {
+    padding-top: 20px;
+  }
+
   p {
     line-height: 1.75;
     margin: 2.5em 0;

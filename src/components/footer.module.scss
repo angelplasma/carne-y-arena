@@ -26,7 +26,15 @@
     justify-content: center;
   }
 
+  @include breakpoint(medium-desktop-up) {
+    margin: 0 0 -10px -20px;
+  }
+
   li {
     padding: 20px;
+
+    @include breakpoint(medium-desktop-up) {
+      padding: 10px 20px;
+    }
   }
 }
