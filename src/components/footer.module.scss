@@ -16,7 +16,11 @@
 }
 
 .text-link {
-  margin: 0 0.5ch;
+  padding: 0.5ch;
+
+  @include breakpoint(medium-desktop-up) {
+    margin: 0 0.5ch 0 -0.5ch;
+  }
 }
 
 .phone {
