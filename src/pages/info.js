@@ -11,7 +11,7 @@ import glassesIcon from '../images/glasses.svg'
 
 const InfoPage = () => (
   <div styleName="container">
-    <h1 className="screenreader-only">Additional Information</h1>
+    <h1 className="screenreader-only">Visitor Information</h1>
 
     <ul styleName="grid">
       <li styleName="box">

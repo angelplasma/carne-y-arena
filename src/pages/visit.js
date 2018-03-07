@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { TICKETS_URL } from '../../lib/constants'
-import styles from './location.module.scss'
+import styles from './visit.module.scss'
 import metroIcon from '../images/metro.svg'
 import busIcon from '../images/bus.svg'
 import carIcon from '../images/car.svg'
 import streetcarIcon from '../images/streetcar.svg'
 
-const LocationPage = () => (
+const VisitPage = () => (
   <div styleName="container">
     <div styleName="location">
       <h1 styleName="title">Carne y Arena Location:</h1>
@@ -32,7 +32,7 @@ const LocationPage = () => (
       <p styleName="transportation-text">
         Take Orange line to New Carrollton and get off at Stadium-Armory Station
         to pick up the B2 bus to MT Rainier, get off at 15th St. NE & Benning Rd
-        NE and it will be a 3 minute walk to exhibit.
+        NE and it will be a 3 minute walk to exhibition.
       </p>
 
       <h2 styleName="transportation-type">By Streetcar:</h2>
@@ -40,7 +40,7 @@ const LocationPage = () => (
       <p styleName="transportation-text">
         From Union Station, take the DC Streetcar at H Street & 3rd Street
         NE towards Benning Road. Exit at Benning Road & 15th Street NE stop.
-        From there it will be a 2 minute walk to the exhibit. The DC Streetcar
+        From there it will be a 2 minute walk to the exhibition. The DC Streetcar
         is free.
       </p>
 
@@ -55,4 +55,4 @@ const LocationPage = () => (
   </div>
 )
 
-export default LocationPage
+export default VisitPage

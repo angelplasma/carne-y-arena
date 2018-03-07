@@ -24,7 +24,7 @@ const IndexPage = () => (
       <p styleName="tagline">(Virtually present, Physically invisible)</p>
 
       <p styleName="summary">
-        This groundbreaking and immersive virtual reality exhibit
+        This groundbreaking and immersive virtual reality exhibition
         is unlike anything you’ve experienced before.
       </p>
 

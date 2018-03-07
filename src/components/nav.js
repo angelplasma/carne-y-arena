@@ -22,7 +22,7 @@ class Nav extends React.Component {
 
         <li>
           <Link to="/info" styleName="link" activeClassName={styles.active}>
-            Additional Information
+            Visitor Information
           </Link>
         </li>
 
@@ -33,8 +33,8 @@ class Nav extends React.Component {
         </li>
 
         <li>
-          <Link to="/location" styleName="link" activeClassName={styles.active}>
-            Location
+          <Link to="/visit" styleName="link" activeClassName={styles.active}>
+            Visit
           </Link>
         </li>
       </ul>
