@@ -1,13 +1,14 @@
 @import '../styles/setup';
 
 $show-quote-background: 'small-desktop-up';
+$max-page-width: 1020px;
 
 .container {
   position: relative;
 
   @include breakpoint($desktop-nav) {
     margin: auto;
-    max-width: 1020px;
+    max-width: $max-page-width;
   }
 }
 
@@ -52,11 +53,15 @@ $show-quote-background: 'small-desktop-up';
 
     p {
       font-family: $extrabolditalic;
-      font-size: (100/960) * 100vw;
+      font-size: (80/840) * 100vw; // adjust to match height of main copy
       line-height: 1;
       margin-bottom: 0.5em;
 
       @include breakpoint(medium-desktop-up) {
+        font-size: (90/960) * 100vw; // adjust to match height of main copy
+      }
+
+      @media (min-width: $max-page-width + 40) {
         font-size: 100px;
       }
     }
