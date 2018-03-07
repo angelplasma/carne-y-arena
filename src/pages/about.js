@@ -13,6 +13,8 @@ const AboutPage = () => (
     <h1 className="screenreader-only">About the Exhibition</h1>
 
     <div styleName="content">
+      <h6>{partialQuoteText}</h6>
+
       <p>
         <b>Academy Award®-winning director Alejandro G. Iñárritu’s conceptual
         virtual reality installation CARNE y ARENA</b> (Virtually present,
@@ -36,6 +38,7 @@ const AboutPage = () => (
         some of them to collaborate with me in the
         project, <span dangerouslySetInnerHTML={{ __html: partialQuoteText }} /> walking
         in the immigrants’ feet, under their skin, and into their hearts.”
+        — Alejandro G. Iñárrito
       </p>
 
       <a href={TICKETS_URL} className="button" rel="noopener">Reserve Your Space</a>
