@@ -39,14 +39,14 @@ body {
 
 main {
   display: block;
-  padding: 80px 20px 50px;
-
-  @include breakpoint($desktop-nav) {
-    padding-top: 50px;
-  }
+  padding: 80px 20px 0;
 
   @include breakpoint(landscape-large-tablet-down) {
     padding-top: 20px;
+  }
+
+  @include breakpoint($desktop-nav) {
+    padding-top: 200px;
   }
 
   p {

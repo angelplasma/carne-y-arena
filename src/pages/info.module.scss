@@ -5,10 +5,6 @@
     margin: auto;
     max-width: 1360px;
   }
-
-  @include breakpoint(large-desktop-up) {
-    padding-top: 30px;
-  }
 }
 
 .grid {

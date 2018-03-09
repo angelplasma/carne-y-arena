@@ -1,19 +1,15 @@
 @import '../styles/setup';
 
 .container {
-  padding: 0 0 130px;
+  padding: 25vw 0;
   text-align: center;
 
-  @include breakpoint(large-mobile-up) {
-    padding: 16vw 0 25vw;
-  }
-
   @include breakpoint(large-tablet-up) {
-    padding: 20vw 0 25vw;
+    padding: 25vh 0 20vh;
   }
 
-  @include breakpoint(landscape-large-tablet-down) {
-    padding-top: 5vh;
+  @include breakpoint(medium-desktop-up) {
+    padding: calc(27vh - 200px) 0 calc(20vh - 10%);
   }
 
   @include breakpoint(large-desktop-up) {
@@ -35,7 +31,7 @@
   }
 
   @include breakpoint(small-desktop-up) {
-    font-size: 32px;
+    font-size: (32/1280) * 100vw; // 32px
   }
 
   @include breakpoint(large-desktop-up) {
@@ -53,7 +49,7 @@
   }
 
   @include breakpoint(small-desktop-up) {
-    font-size: 86px;
+    font-size: (82/1280) * 100vw; // 82px
   }
 
   @include breakpoint(large-desktop-up) {
@@ -78,7 +74,7 @@
   }
 
   @include breakpoint(small-desktop-up) {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   @include breakpoint(large-desktop-up) {
@@ -88,23 +84,23 @@
 
 .summary {
   font-family: $semibold;
-  font-size: (18/320) * 100vw;
+  font-size: 4.8vw; // 18px at 375 viewport
   line-height: 1.5;
   margin: 0 auto 1.5em;
 
-  @include breakpoint(small-tablet-up) {
+  @include breakpoint(large-mobile-up) {
     font-size: 4vw;
-    max-width: 80vw;
+    width: 75vw;
   }
 
-  @include breakpoint(small-desktop-up) {
-    font-size: (32/$max-breakpoint) * 100vw;
-    max-width: (860/$max-breakpoint) * 100vw;
+  @include breakpoint(small-tablet-up) {
+    font-size: 2.5vw;
+    width: 65vw;
   }
 
   @include breakpoint(large-desktop-up) {
     font-size: 35px;
-    max-width: 920px;
+    width: 960px;
   }
 }
 
@@ -112,15 +108,43 @@
   .home {
     min-height: 100%;
 
+    body {
+      background: 50% no-repeat;
+      background-size: cover;
+
+      @include breakpoint(small-desktop-down) {
+        background-position: 50% 75%;
+        background-size: auto;
+      }
+
+      @include breakpoint(large-tablet-down) {
+        background-position: 50% 70%;
+      }
+
+      @include breakpoint(small-tablet-down) {
+        background-position: 50% 72%;
+      }
+
+      @include breakpoint(large-mobile-down) {
+        background-position: 50% 78%;
+      }
+
+      @include breakpoint(medium-mobile-down) {
+        background-position: 50% 75%;
+      }
+
+      @include breakpoint(small-mobile-down) {
+        background-position: 50% 70%;
+      }
+    }
+
     // images optimized with imgix sandbox: https://sandbox.imgix.com/
     &[data-webp="true"] body {
-      background: url('../images/bg-q50-sharp20.webp') 50% no-repeat;
-      background-size: cover;
+      background-image: url('../images/bg-q50-sharp20.webp');
     }
 
     &[data-webp="false"] body {
-      background: url('../images/bg-q60-sharp10.jpeg') 50% no-repeat;
-      background-size: cover;
+      background-image: url('../images/bg-q60-sharp10.jpeg');
     }
   }
 }

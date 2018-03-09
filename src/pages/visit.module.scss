@@ -6,10 +6,6 @@
     margin: auto;
     max-width: 1050px;
   }
-
-  @include breakpoint(large-desktop-up) {
-    padding-top: 70px;
-  }
 }
 
 .location {

@@ -9,9 +9,7 @@ const Footer = () => (
   <footer styleName="footer">
     <p>
       Produced and Financed by Legendary Entertainment and Emerson Collective.
-    </p>
 
-    <p>
       <Link to="/terms" styleName="text-link">
         Terms & Conditions
       </Link>
@@ -25,7 +23,7 @@ const Footer = () => (
       </Link>
     </p>
 
-    {/*<p styleName="phone">(888) 888-8888</p>*/}
+    <p styleName="phone">(888) 888-8888</p>
 
     <ul styleName="logos">
       <li><img src={lpLogo} alt="Legendary Entertainment" width="107" /></li>

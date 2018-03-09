@@ -5,6 +5,10 @@
   display: flex;
   justify-content: center;
   padding: 5px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 500;
 
   @include breakpoint($desktop-nav) {
     height: 150px;
