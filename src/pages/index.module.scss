@@ -17,68 +17,10 @@
   }
 }
 
-.title {
-  line-height: 1.1;
-  margin: 0;
-}
-
-.line1 {
-  display: block;
-  font-size: (14/320) * 100vw;
-
-  @include breakpoint(small-tablet-up) {
-    font-size: (26/840) * 100vw;
-  }
-
-  @include breakpoint(small-desktop-up) {
-    font-size: (32/1280) * 100vw; // 32px
-  }
-
-  @include breakpoint(large-desktop-up) {
-    font-size: 36px;
-  }
-}
-
-.line2 {
-  display: block;
-  font-size: (36/320) * 100vw; // 36px
-  text-transform: uppercase;
-
-  @include breakpoint(small-tablet-up) {
-    font-size: (72/840) * 100vw; // 72px
-  }
-
-  @include breakpoint(small-desktop-up) {
-    font-size: (82/1280) * 100vw; // 82px
-  }
-
-  @include breakpoint(large-desktop-up) {
-    font-size: 98px;
-  }
-
-  b {
-    color: rgba(color(offwhite), 0.7);
-    font-family: $regular;
-    font-weight: normal;
-  }
-}
-
-.tagline {
-  font-size: 14px;
-  line-height: 1.75;
-  margin-top: 0;
-
+.logo {
   @include breakpoint(large-mobile-up) {
-    @include smooth;
-    font-size: 18px;
-  }
-
-  @include breakpoint(small-desktop-up) {
-    font-size: 20px;
-  }
-
-  @include breakpoint(large-desktop-up) {
-    font-size: 30px;
+    width: 75%;
+    max-width: 750px;
   }
 }
 
@@ -86,21 +28,26 @@
   font-family: $semibold;
   font-size: 4.8vw; // 18px at 375 viewport
   line-height: 1.5;
-  margin: 0 auto 1.5em;
+  margin: 1.25em auto;
 
   @include breakpoint(large-mobile-up) {
     font-size: 4vw;
-    width: 75vw;
+    width: 77vw;
   }
 
   @include breakpoint(small-tablet-up) {
+    font-size: 3vw;
+    width: 58vw;
+  }
+
+  @include breakpoint(small-desktop-up) {
     font-size: 2.5vw;
     width: 65vw;
   }
 
   @include breakpoint(large-desktop-up) {
-    font-size: 35px;
-    width: 960px;
+    font-size: 32px;
+    width: 880px;
   }
 }
 

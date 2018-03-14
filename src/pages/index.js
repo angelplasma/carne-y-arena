@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 
 import { TICKETS_URL } from '../../lib/constants'
 import styles from './index.module.scss'
+import logo from '../images/logo.svg'
 
 const IndexPage = () => (
   <div>
@@ -13,15 +14,7 @@ const IndexPage = () => (
     />
 
     <section styleName="container">
-      <h1 styleName="title">
-        <span styleName="line1">
-          Alejandro G. Iñárritu
-          <span className="screenreader-only">’s</span>
-        </span>
-        <span styleName="line2">Carne <b>y</b> Arena</span>
-      </h1>
-
-      <p styleName="tagline">(Virtually present, Physically invisible)</p>
+      <img src={logo} alt="Alejandro G. Iñárritu’s Carne y Arena" width="750" styleName="logo" />
 
       <p styleName="summary">
         This groundbreaking and immersive virtual reality exhibition
