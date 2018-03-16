@@ -11,7 +11,7 @@
   z-index: 500;
 
   @include breakpoint($desktop-nav) {
-    height: 150px;
+    height: 110px;
     padding: 0;
   }
 }

@@ -1,53 +1,53 @@
 @import '../styles/setup';
 
 .container {
-  padding: 25vw 0;
+  padding: 0 0 50px;
   text-align: center;
 
-  @include breakpoint(large-tablet-up) {
-    padding: 25vh 0 20vh;
-  }
-
-  @include breakpoint(medium-desktop-up) {
-    padding: calc(27vh - 200px) 0 calc(20vh - 10%);
-  }
-
-  @include breakpoint(large-desktop-up) {
-    padding: calc(27vh - 200px) 0 calc(20vh - 5%);
+  @include breakpoint($desktop-nav) {
+    padding-bottom: 0;
   }
 }
 
 .logo {
+  width: 280px;
+
   @include breakpoint(large-mobile-up) {
-    width: 75%;
-    max-width: 750px;
+    width: 360px;
+  }
+
+  @include breakpoint(small-tablet-up) {
+    width: 430px;
+  }
+}
+
+.heart {
+  height: 328px;
+  margin: 15px auto 20px;
+  width: 150px;
+
+  // begin scaling the heart placeholder to match the background
+  @media (min-width: $background-width) {
+    height: (328px/$background-width) * 100vw;
+    margin-bottom: (20px/$background-width) * 100vw;
+    margin-top: (15px/$background-width) * 100vw;
   }
 }
 
 .summary {
   font-family: $semibold;
-  font-size: 4.8vw; // 18px at 375 viewport
-  line-height: 1.5;
-  margin: 1.25em auto;
-
-  @include breakpoint(large-mobile-up) {
-    font-size: 4vw;
-    width: 77vw;
-  }
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0 auto 35px;
 
   @include breakpoint(small-tablet-up) {
-    font-size: 3vw;
-    width: 58vw;
+    font-size: 20px;
+    width: 540px;
   }
 
-  @include breakpoint(small-desktop-up) {
-    font-size: 2.5vw;
-    width: 65vw;
-  }
-
-  @include breakpoint(large-desktop-up) {
-    font-size: 32px;
-    width: 880px;
+  @include breakpoint(large-tablet-up) {
+    font-size: 24px;
+    width: 640px;
   }
 }
 
@@ -56,32 +56,26 @@
     min-height: 100%;
 
     body {
-      background: 50% no-repeat;
-      background-size: cover;
+      background-position: 50% -70px;
+      background-repeat: no-repeat;
+      background-size: auto;
+      min-height: 900px;
 
-      @include breakpoint(small-desktop-down) {
-        background-position: 50% 75%;
-        background-size: auto;
+      @include breakpoint(large-mobile-up) {
+        background-position-y: -50px;
       }
 
-      @include breakpoint(large-tablet-down) {
-        background-position: 50% 70%;
+      @include breakpoint(small-tablet-up) {
+        background-position-y: -30px;
       }
 
-      @include breakpoint(small-tablet-down) {
-        background-position: 50% 72%;
+      @include breakpoint($desktop-nav) {
+        background-position-y: 0;
       }
 
-      @include breakpoint(large-mobile-down) {
-        background-position: 50% 78%;
-      }
-
-      @include breakpoint(medium-mobile-down) {
-        background-position: 50% 75%;
-      }
-
-      @include breakpoint(small-mobile-down) {
-        background-position: 50% 70%;
+      @media (min-width: $background-width) {
+        background-position-y: 45%; // center of heart image
+        background-size: 100% auto;
       }
     }
 

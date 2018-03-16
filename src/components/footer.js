@@ -8,23 +8,16 @@ import ecLogo from '../images/emerson-collective-logo.png'
 
 const Footer = () => (
   <footer styleName="footer">
-    <p>
+    <p styleName="copyright">
       Produced and Financed by Legendary Entertainment and Emerson Collective.
-
-      <Link to="/terms" styleName="text-link">
-        Terms & Conditions
-      </Link>
-
-      <Link to="/privacy" styleName="text-link">
-        Privacy Policy
-      </Link>
-
-      <Link to="/press" styleName="text-link">
-        Press
-      </Link>
     </p>
 
-    <p styleName="phone">(888) 888-8888</p>
+    <p styleName="links">
+      <Link to="/terms">Terms & Conditions</Link>
+      <Link to="/privacy">Privacy Policy</Link>
+      <Link to="/press">Press</Link>
+      <Link to="/contact">Contact</Link>
+    </p>
 
     <ul styleName="logos">
       <li><img src={lpLogo} alt="Legendary Entertainment" width="107" /></li>

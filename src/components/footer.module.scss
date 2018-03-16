@@ -2,45 +2,53 @@
 
 .footer {
   font-size: 13px;
+  justify-content: space-between;
   line-height: 1.5;
-  padding: 20px 20px 0;
+  padding: 20px;
 
-  @include breakpoint(small-desktop-down) {
+  @include breakpoint(large-tablet-down) {
     text-align: center;
   }
 
-  @include breakpoint(large-tablet-up) {
-    position: relative;
+  @include breakpoint(small-desktop-up) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint($mobile-nav) {
+    // cover edge of background when footer becomes taller on smaller screens
+    background: linear-gradient(rgba(#1B2634, 0), #1B2634 75px, #1B2634 125px, rgba(#1B2634, 0));
   }
 
   @include breakpoint($desktop-nav) {
-    padding: 60px 3vw 50px;
+    padding: 30px 3vw 20px;
   }
 }
 
-.text-link {
-  padding: 0.5ch;
+.copyright {
+  @include breakpoint(small-desktop-up) {
+    width: 60%;
+  }
+}
 
-  @include breakpoint(medium-desktop-up) {
-    margin: 0 0.25ch;
+.links {
+  margin-top: 0;
 
-    &:first-of-type {
-      margin-left: 0.5ch;
+  @include breakpoint(small-desktop-up) {
+    text-align: right;
+    width: 40%;
+  }
+
+  a {
+    padding: 0.5ch;
+
+    @include breakpoint(medium-desktop-up) {
+      margin: 0 0.25ch;
+
+      &:first-of-type {
+        margin-left: 0.5ch;
+      }
     }
-  }
-}
-
-.phone {
-  font-family: $semibold;
-  font-size: 16px;
-  letter-spacing: 1.6px;
-  margin: 0;
-  text-transform: uppercase;
-
-  @include breakpoint(medium-desktop-up) {
-    position: absolute;
-    right: 3vw;
-    top: 58px;
   }
 }
 
@@ -51,8 +59,9 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
 
-  @include breakpoint(small-desktop-down) {
+  @include breakpoint(large-tablet-down) {
     justify-content: center;
   }
 
