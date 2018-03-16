@@ -95,6 +95,15 @@ img {
 .container {
   margin: auto;
   max-width: 900px;
+  min-height: 100vw;
+
+  @include breakpoint(small-tablet-up) {
+    min-height: 75vw;
+  }
+
+  @include breakpoint(small-desktop-up) {
+    min-height: 400px;
+  }
 
   h2 {
     margin: 1.5em 0 0;
