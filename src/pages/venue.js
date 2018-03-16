@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { TICKETS_URL } from '../../lib/constants'
-import styles from './visit.module.scss'
+import styles from './venue.module.scss'
 import metroIcon from '../images/metro.svg'
 import busIcon from '../images/bus.svg'
 import carIcon from '../images/car.svg'
 import streetcarIcon from '../images/streetcar.svg'
 
-const VisitPage = () => (
+const VenuePage = () => (
   <div styleName="container">
     <div styleName="location">
       <h1 styleName="title">Carne y Arena Location:</h1>
@@ -55,4 +55,4 @@ const VisitPage = () => (
   </div>
 )
 
-export default VisitPage
+export default VenuePage

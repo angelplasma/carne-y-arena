@@ -27,14 +27,8 @@ class Nav extends React.Component {
         </li>
 
         <li>
-          <a href={TICKETS_URL} styleName="link" rel="noopener">
-            Reserve Your Space
-          </a>
-        </li>
-
-        <li>
-          <Link to="/visit" styleName="link" activeClassName={styles.active}>
-            Visit
+          <Link to="/venue" styleName="link" activeClassName={styles.active}>
+            Venue
           </Link>
         </li>
       </ul>
