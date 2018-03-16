@@ -8,8 +8,8 @@ import ecLogo from '../images/emerson-collective-logo.png'
 
 const Footer = () => (
   <footer styleName="footer">
-    <p styleName="copyright">
-      Produced and Financed by Legendary Entertainment and Emerson Collective.
+    <p styleName="producers">
+      Produced and Financed by Legendary Entertainment, Fondazione Prada and Emerson Collective.
     </p>
 
     <p styleName="links">
