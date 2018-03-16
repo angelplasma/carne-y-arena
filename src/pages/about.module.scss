@@ -4,9 +4,8 @@ $show-quote-background: 'small-desktop-up';
 $max-page-width: 1020px;
 
 .container {
-  position: relative;
-
   @include breakpoint($desktop-nav) {
+    display: flex;
     margin: auto;
     max-width: $max-page-width;
   }
@@ -16,8 +15,9 @@ $max-page-width: 1020px;
   margin: auto;
   max-width: 500px;
 
-  @include breakpoint($show-quote-background) {
+  @include breakpoint(small-desktop-up) {
     max-width: 440px;
+    margin: 0 0 0 auto;
   }
 
   @include breakpoint(medium-desktop-up) {
@@ -26,48 +26,5 @@ $max-page-width: 1020px;
 
   i {
     font-style: normal;
-  }
-
-  @include breakpoint($show-quote-background) {
-    position: absolute;
-    right: 0;
-    top: 50px;
-    z-index: 1;
-  }
-}
-
-.background {
-  display: none;
-  margin: auto;
-  user-select: none;
-
-  @include breakpoint($show-quote-background) {
-    display: block;
-  }
-
-  blockquote {
-    color: #A8ACBA;
-    margin: 0;
-    opacity: 0.08;
-    padding: 0;
-
-    p {
-      font-family: $extrabolditalic;
-      font-size: (80/840) * 100vw; // adjust to match height of main copy
-      line-height: 1;
-      margin-bottom: 0.5em;
-
-      @include breakpoint(medium-desktop-up) {
-        font-size: (90/960) * 100vw; // adjust to match height of main copy
-      }
-
-      @media (min-width: $max-page-width + 40) {
-        font-size: 100px;
-      }
-    }
-
-    i {
-      color: #DB7275;
-    }
   }
 }
