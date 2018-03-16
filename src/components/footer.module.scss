@@ -21,7 +21,11 @@
   }
 
   @include breakpoint($desktop-nav) {
-    padding: 30px 3vw 20px;
+    padding: 60px 3vw 20px;
+
+    .home & {
+      padding-top: 30px;
+    }
   }
 }
 
