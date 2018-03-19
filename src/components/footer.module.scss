@@ -1,9 +1,14 @@
 @import '../styles/setup';
 
 .footer {
+  // cover edge of background when footer becomes taller on smaller screens
+  $color: #2f3847;
+  background: linear-gradient(rgba($color, 0), $color 25%, $color 75%, rgba($color, 0));
   font-size: 13px;
   justify-content: space-between;
   line-height: 1.5;
+  margin: auto;
+  max-width: $background-width;
   padding: 20px;
 
   @include breakpoint(large-tablet-down) {
@@ -13,11 +18,7 @@
   @include breakpoint(small-desktop-up) {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  @include breakpoint($mobile-nav) {
-    // cover edge of background when footer becomes taller on smaller screens
-    background: linear-gradient(rgba(#1B2634, 0), #1B2634 75px, #1B2634 125px, rgba(#1B2634, 0));
+    position: relative;
   }
 
   @include breakpoint($desktop-nav) {
@@ -29,18 +30,27 @@
   }
 }
 
-.producers {
-  @include breakpoint(small-desktop-up) {
-    width: 60%;
-  }
+.producers-intro {
+  margin-top: 0;
+}
+
+.partners-intro {
+  margin-top: 3em;
 }
 
 .links {
   margin-top: 0;
 
   @include breakpoint(small-desktop-up) {
+    position: absolute;
+    right: 20px;
+    top: 20px;
     text-align: right;
-    width: 40%;
+  }
+
+  @include breakpoint($desktop-nav) {
+    right: 3vw;
+    top: 60px;
   }
 
   a {

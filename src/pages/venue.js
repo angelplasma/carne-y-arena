@@ -18,6 +18,8 @@ const VenuePage = () => (
       </address>
 
       <a href={TICKETS_URL} className="button" rel="noopener">Reserve Your Space</a>
+
+      <p>Exhibition hours 9am-9pm daily.</p>
     </div>
 
     <div styleName="directions">

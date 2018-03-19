@@ -36,7 +36,7 @@ const InfoPage = () => (
 
       <li styleName="box">
         <img src={formIcon} alt="" styleName="icon" />
-        <span>Waiver and release of liability will be available on-site and must be signed before participating. For visitors ages 14 to 17, a guardian must be present to sign the waiver and release of liability at the time of the visit.</span>
+        <span>Waiver and release of liability will be available on-site and must be signed before participating. For visitors ages 14 to 17, a parent or guardian must sign the waiver and release of liability.</span>
       </li>
 
       <li styleName="box">

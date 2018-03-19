@@ -31,6 +31,12 @@ class Nav extends React.Component {
             Venue
           </Link>
         </li>
+
+        <li>
+          <Link to="/contact" styleName="link" activeClassName={styles.active}>
+            Contact
+          </Link>
+        </li>
       </ul>
     )
   }
