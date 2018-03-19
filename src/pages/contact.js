@@ -15,20 +15,16 @@ const renderArticleBox = (node, index) => {
     <li className="box" styleName="custom-box" key={index}>
       <h3>{node.title}</h3>
       <p>{node.summary}</p>
-      <a href={node.url} className="button">Read More</a>
+      <a href={node.url} className="button" rel="noopener">Read More</a>
     </li>
   )
 }
 
 const renderBox = ({node}, index) => {
   if (node.imagedownload) {
-    return (
-      renderImageBox(node)
-    )
+    return renderImageBox(node)
   } else {
-    return (
-      renderArticleBox(node, index)
-    )
+    return renderArticleBox(node, index)
   }
 }
 
