@@ -1,0 +1,14 @@
+- title: Article 1
+  summary: Here is a short piece of summary text about this article.
+  url: http://www.test.net/
+- title: Article 2
+  summary: Here is a short piece of summary text about this article.
+  url: http://www.test.net/
+- title: Article 3
+  summary: Here is a short piece of summary text about this article.
+  url: http://www.test.net/
+- imagedownload: true
+  url: ./press-image.jpg
+- title: Article 4
+  summary: Here is a short piece of summary text about this article.
+  url: http://www.test.net/

@@ -9,3 +9,50 @@
     width: calc(50% - 20px);
   }
 }
+
+.pr-button {
+  display: table;
+  margin: 3em auto;
+}
+
+.custom-grid {
+  margin: auto;
+  max-width: 1360px;
+
+  @include breakpoint(large-desktop-up) {
+    grid-template-columns: repeat(3, 1fr); // override base .grid class
+  }
+}
+
+.custom-box {
+  @include breakpoint(small-desktop-up) {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+
+  @include breakpoint(medium-desktop-up) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.image-box {
+  background-size: cover;
+  justify-content: flex-end;
+
+  @include breakpoint(small-desktop-up) {
+    width: calc(2/3 * 100% - 16px); // fallback
+
+    @supports (grid-gap: 15px) {
+      -ms-grid-column-span: 2;
+      grid-column: span 2;
+      padding-left: 155px;
+      padding-right: 155px;
+      width: auto;
+    }
+  }
+}

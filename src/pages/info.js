@@ -13,38 +13,38 @@ const InfoPage = () => (
   <div styleName="container">
     <h1 className="screenreader-only">Visitor Information</h1>
 
-    <ul styleName="grid">
-      <li styleName="box">
+    <ul className="grid">
+      <li className="box" styleName="box">
         <img src={compassIcon} alt="" styleName="icon" />
         <strong>We recommend that you arrive at least 30 minutes prior to your appointment time.</strong>
       </li>
 
-      <li styleName="box">
+      <li className="box" styleName="box">
         <img src={backpackIcon} alt="" styleName="icon" />
         <span><em>CARNE y ARENA</em> is a virtual reality work that is highly immersive and can feel extremely realistic including experiences with firearms.</span>
       </li>
 
-      <li styleName="box">
+      <li className="box" styleName="box">
         <img src={cameraIcon} alt="" styleName="icon" />
         <span>No photography or other documentation of the work is permitted.</span>
       </li>
 
-      <li styleName="box">
+      <li className="box" styleName="box">
         <img src={chipIcon} alt="" styleName="icon" />
         <span>Due to the complex technology employed, the installation may require unplanned maintenance, resulting in delays or cancellation.</span>
       </li>
 
-      <li styleName="box">
+      <li className="box" styleName="box">
         <img src={formIcon} alt="" styleName="icon" />
         <span>Waiver and release of liability will be available on-site and must be signed before participating. For visitors ages 14 to 17, a parent or guardian must sign the waiver and release of liability.</span>
       </li>
 
-      <li styleName="box">
+      <li className="box" styleName="box">
         <img src={eyeIcon} alt="" styleName="icon" />
         <span><em>CARNE y ARENA</em> is not recommended for individuals with claustrophobia, heart conditions, back conditions, a history of seizures, epilepsy, and/or sensitivity to flashing lights.</span>
       </li>
 
-      <li styleName="box">
+      <li className="box" styleName="box">
         <img src={glassesIcon} alt="" styleName="icon" />
         <span>Pack light and wear shoes that are easy to remove. If you have thick eye glass frames, wearing contacts is recommended but not necessary. Along with your shoes, bags and backpacks must be placed in a small locker as you enter.</span>
       </li>

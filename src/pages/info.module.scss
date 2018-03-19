@@ -7,71 +7,7 @@
   }
 }
 
-.grid {
-  font-size: 16px;
-  line-height: 2;
-  margin: 0;
-  padding: 0;
-
-  @include breakpoint(small-tablet-up) {
-    // fallback grid
-    display: flex;
-    flex-wrap: wrap;
-
-    // real grid
-    grid-gap: 15px;
-    grid-template-columns: repeat(2, 1fr);
-
-    @supports (grid-gap: 15px) {
-      display: grid;
-    }
-  }
-
-  @include breakpoint(small-desktop-up) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include breakpoint(large-desktop-up) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
 .box {
-  align-items: center;
-  background: #303848;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 60px 8vw;
-  text-align: center;
-  width: 100%; // fallback
-
-  @include breakpoint(large-mobile-down) {
-    & + & {
-      margin-top: 15px;
-    }
-  }
-
-  // grid starts here
-  @include breakpoint(small-tablet-up) {
-    margin: 8px; // fallback
-  }
-
-  @include breakpoint(small-desktop-up) {
-    width: calc(50% - 16px); // fallback
-  }
-
-  @include breakpoint(large-desktop-up) {
-    width: calc(1/3 * 100% - 16px); // fallback
-  }
-
-  @supports (grid-gap: 15px) {
-    margin: 0;
-    width: auto;
-  }
-
   // grid spanning starts here
   @include range(small-tablet-up, large-tablet-down) {
     &:nth-child(3n+1) {

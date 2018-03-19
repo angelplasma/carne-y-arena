@@ -26,5 +26,12 @@ module.exports = {
         id: 'GTM-NJFQJZJ',
       },
     },
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/data/',
+      },
+    }
   ],
 };
