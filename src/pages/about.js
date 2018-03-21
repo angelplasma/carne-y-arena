@@ -9,12 +9,12 @@ const AboutPage = () => (
 
     <p>
       Academy Award®-winning director Alejandro G. Iñárritu’s conceptual virtual
-      reality installation CARNE y ARENA (Virtually present, Physically invisible)
+      reality installation <em>CARNE y ARENA</em> (Virtually present, Physically invisible)
       explores the human condition of immigrants and refugees. Based on true accounts
-      from Central American and Mexican refugees, CARNE y ARENA blurs and binds
+      from Central American and Mexican refugees, <em>CARNE y ARENA</em> blurs and binds
       together the superficial lines between subject and bystander, allowing
       individuals to walk in a vast space and live a fragment of a refugee’s personal
-      journey. Awarded a special Oscar last year, CARNE y ARENA is a six-and-a-half-
+      journey. Awarded a special Oscar last year, <em>CARNE y ARENA</em> is a six-and-a-half-
       minute solo experience that employs state-of-the-art technology to create a
       multi-narrative space with human characters. The project reunites frequent
       collaborators Iñárritu and three-time Academy Award®-winning cinematographer
@@ -22,10 +22,19 @@ const AboutPage = () => (
     </p>
 
     <p>
-      CARNE y ARENA premiered last May at the 70th Cannes Film Festival prior to
-      touring internationally to the Fondazione Prada in Milan, the Tlatelolco
-      University Cultural Center in Mexico City and the Los Angeles County Museum of
-      Art (LACMA).
+      <em>CARNE y ARENA</em> premiered last May at the 70th Cannes Film Festival
+      as the first virtual reality project to be featured in the festival's
+      history, prior to touring internationally to the Fondazione Prada in
+      Milan, the Tlatelolco University Cultural Center in Mexico City and the
+      Los Angeles County Museum of Art (LACMA).
+    </p>
+
+    <p>
+      Located in the H Street NE corridor, <em>CARNE y ARENA</em> is proud to
+      partner with the Atlas Center for Performing Arts on community outreach.
+      Additionally, programming around <em>CARNE y ARENA</em> will include a
+      panel discussion with Iñárritu hosted by The Phillips Collection this
+      spring. Check back for future programming and event updates.
     </p>
 
     <p>

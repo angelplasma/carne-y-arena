@@ -5,7 +5,7 @@ const TermsConditionsPage = () => (
     <h1>Privacy Policy</h1>
 
     <p>
-      Welcome to the Carne y Arena DC website (the “Site”), created under the
+      Welcome to the <em>Carne y Arena</em> DC website (the “Site”), created under the
       auspices of DC Real Estate Holdings, LLC (“DCREH”). This Privacy Policy is
       to help you understand what information DCREH collects, how DCREH uses it,
       how it may be shared, and what choices you have with respect to the

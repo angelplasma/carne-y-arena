@@ -26,7 +26,7 @@ const Footer = () => (
     </ul>
 
     <p styleName="partners-intro">
-      Community partners
+      Washington, D.C. Community Partners
     </p>
 
     <ul styleName="logos">

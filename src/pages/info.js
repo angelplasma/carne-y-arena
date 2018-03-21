@@ -21,7 +21,7 @@ const InfoPage = () => (
 
       <li styleName="box">
         <img src={backpackIcon} alt="" styleName="icon" />
-        <span>CARNE y ARENA is a virtual reality work that is highly immersive and can feel extremely realistic including experiences with firearms.</span>
+        <span><em>CARNE y ARENA</em> is a virtual reality work that is highly immersive and can feel extremely realistic including experiences with firearms.</span>
       </li>
 
       <li styleName="box">
@@ -41,7 +41,7 @@ const InfoPage = () => (
 
       <li styleName="box">
         <img src={eyeIcon} alt="" styleName="icon" />
-        <span>CARNE y ARENA is not recommended for individuals with claustrophobia, heart conditions, back conditions, a history of seizures, epilepsy, and/or sensitivity to flashing lights.</span>
+        <span><em>CARNE y ARENA</em> is not recommended for individuals with claustrophobia, heart conditions, back conditions, a history of seizures, epilepsy, and/or sensitivity to flashing lights.</span>
       </li>
 
       <li styleName="box">

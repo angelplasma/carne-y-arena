@@ -5,7 +5,7 @@ const TermsConditionsPage = () => (
     <h1>Terms & Conditions</h1>
 
     <p>
-      Welcome to the Carne y Arena DC website (the “Site”), created under the
+      Welcome to the <em>Carne y Arena</em> DC website (the “Site”), created under the
       auspices of DC Real Estate Holdings, LLC (“DCREH”). Please read the
       following Terms and Conditions of Use (“Terms”) carefully before using the
       Site. These Terms are binding on the parties and govern your relationship
@@ -80,7 +80,7 @@ const TermsConditionsPage = () => (
       DCREH is the owner or licensee of all rights
       in the Site and its content and related software. You have no rights to such
       content or software other than those expressly granted in these Terms.
-      EMERSON COLLECTIVE®, CARNE Y ARENATM, and the logos or other proprietary
+      EMERSON COLLECTIVE®, <em>CARNE Y ARENA</em>™, and the logos or other proprietary
       marks of DCREH and its affiliated organizations belong to them exclusively.
       No right, title or interest in those marks is granted in these Terms. Any
       third party trademarks or service marks displayed on the Site are the

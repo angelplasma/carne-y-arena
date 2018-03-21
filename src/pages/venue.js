@@ -10,7 +10,7 @@ import streetcarIcon from '../images/streetcar.svg'
 const VenuePage = () => (
   <div styleName="container">
     <div styleName="location">
-      <h1 styleName="title">Carne y Arena Location:</h1>
+      <h1 styleName="title"><em>Carne y Arena</em> Location:</h1>
 
       <address styleName="address">
         1611 Benning Road NE<br />
