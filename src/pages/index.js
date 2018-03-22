@@ -14,16 +14,16 @@ const IndexPage = () => (
     />
 
     <section styleName="container">
-      <img src={logo} alt="Alejandro G. Iñárritu’s Carne y Arena" width="750" styleName="logo" />
+      <div styleName="content">
+        <img src={logo} alt="Alejandro G. Iñárritu’s Carne y Arena" width="415" styleName="logo" />
 
-      <div styleName="heart" />
+        <p styleName="summary">
+          This groundbreaking and immersive virtual reality exhibition
+          is unlike anything you’ve experienced before.
+        </p>
 
-      <p styleName="summary">
-        This groundbreaking and immersive virtual reality exhibition
-        is unlike anything you’ve experienced before.
-      </p>
-
-      <a href={TICKETS_URL} className="button" rel="noopener">Reserve Your Space</a>
+        <a href={TICKETS_URL} className="button" rel="noopener">Reserve Your Space</a>
+      </div>
     </section>
   </div>
 )

@@ -1,11 +1,20 @@
 @import '../styles/setup';
 
 .container {
-  padding: 0 0 50px;
-  text-align: center;
+  margin: auto;
+  max-width: 1440px;
+}
+
+.content {
+  max-width: 415px;
+  padding: 50px 0 0;
+
+  @include breakpoint(small-tablet-up) {
+    padding-top: 100px;
+  }
 
   @include breakpoint($desktop-nav) {
-    padding-bottom: 0;
+    padding-top: 100px;
   }
 }
 
@@ -17,30 +26,22 @@
   }
 
   @include breakpoint(small-tablet-up) {
-    width: 430px;
+    width: 415px;
   }
-}
-
-.heart {
-  height: 328px;
-  margin: 15px auto 20px;
-  width: 150px;
 }
 
 .summary {
   font-family: $semibold;
   font-size: 18px;
   line-height: 1.25;
-  margin: 0 auto 35px;
+  margin: 1.5em 0;
 
   @include breakpoint(small-tablet-up) {
     font-size: 20px;
-    width: 540px;
   }
 
   @include breakpoint(large-tablet-up) {
     font-size: 24px;
-    width: 640px;
   }
 }
 
@@ -49,31 +50,75 @@
     min-height: 100%;
 
     body {
-      background-position: 50% -70px;
+      background-position: 50% 0;
       background-repeat: no-repeat;
-      background-size: auto;
-      min-height: 900px;
 
-      @include breakpoint(large-mobile-up) {
-        background-position-y: -50px;
+      @include breakpoint(large-mobile-down) {
+        background-size: 1310px auto;
+        height: 100vh;
+        max-height: 700px;
+      }
+
+      @media (max-width: 420px) and (max-aspect-ratio: 16/9) {
+        background-size: cover;
+        height: auto;
+        max-height: none;
+        min-height: 100vh;
       }
 
       @include breakpoint(small-tablet-up) {
-        background-position-y: -30px;
+        min-height: 900px;
       }
 
-      @include breakpoint($desktop-nav) {
-        background-position-y: 0;
+      @media (min-width: 600px) and (max-width: 700px) {
+        background-position-x: 39%;
+      }
+
+      @media (min-width: 700px) and (max-width: 800px) {
+        background-position-x: 34%;
+      }
+
+      @media (min-width: 800px) and (max-width: 899px) {
+        background-position-x: 25%;
+      }
+
+      @media (min-width: 900px) and (max-width: 949px) {
+        background-position-x: 22%;
+      }
+
+      @media (min-width: 950px) and (max-width: 1023px) {
+        background-position-x: -80px;
+      }
+
+      @media (min-width: 1024px) {
+        background-position-x: 0;
+      }
+
+      @media (min-width: 1600px) {
+        background-position: 50% 0;
+        background-size: cover;
+        min-height: 56.25vw;
       }
     }
 
     // images optimized with imgix sandbox: https://sandbox.imgix.com/
     &[data-webp="true"] body {
-      background-image: url('../images/bg-q50-sharp20.webp');
+      background-image: url('../images/bg-q65-sharp20.webp');
     }
 
     &[data-webp="false"] body {
-      background-image: url('../images/bg-q60-sharp10.jpeg');
+      background-image: url('../images/bg-q75-sharp10.jpeg');
+    }
+
+    body,
+    #___gatsby,
+    [data-reactroot] {
+      display: flex;
+      width: 100%;
+    }
+
+    [data-reactroot] {
+      flex-direction: column;
     }
   }
 }

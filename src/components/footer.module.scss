@@ -1,55 +1,51 @@
 @import '../styles/setup';
 
 .footer {
-  // cover edge of background when footer becomes taller on smaller screens
-  $color: #2f3847;
-  background: linear-gradient(rgba($color, 0), $color 25%, $color 75%, rgba($color, 0));
-  font-size: 13px;
-  justify-content: space-between;
   line-height: 1.5;
-  margin: auto;
-  max-width: $background-width;
+  margin: auto auto 0;
+  max-width: 1440px;
   padding: 20px;
+  width: 100%;
 
-  @include breakpoint(large-tablet-down) {
+  @include breakpoint(small-desktop-down) {
     text-align: center;
   }
 
-  @include breakpoint(small-desktop-up) {
+  @include breakpoint(medium-desktop-up) {
     display: flex;
-    flex-wrap: wrap;
     position: relative;
   }
 
   @include breakpoint($desktop-nav) {
-    padding: 60px 3vw 20px;
+    padding: 60px 40px 20px;
 
     .home & {
       padding-top: 30px;
     }
   }
+
+  h2 {
+    font-family: $regular;
+    font-size: 11px;
+  }
 }
 
-.producers-intro {
-  margin-top: 0;
-}
-
-.partners-intro {
-  margin-top: 3em;
+.partners {
+  @include breakpoint(medium-desktop-up) {
+    padding: 0 60px;
+  }
 }
 
 .links {
   margin-top: 0;
 
-  @include breakpoint(small-desktop-up) {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    text-align: right;
+  @include breakpoint(medium-desktop-up) {
+    order: 99;
+    margin-left: auto;
   }
 
   @include breakpoint($desktop-nav) {
-    right: 3vw;
+    right: 40px;
     top: 60px;
   }
 
@@ -58,6 +54,7 @@
 
     @include breakpoint(medium-desktop-up) {
       margin: 0 0.25ch;
+      white-space: nowrap;
 
       &:first-of-type {
         margin-left: 0.5ch;
@@ -69,30 +66,30 @@
 .logos {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
   width: 100%;
 
-  @include breakpoint(large-tablet-down) {
+  @include breakpoint(small-desktop-down) {
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   @include breakpoint(medium-desktop-up) {
-    margin: 0 0 -10px -20px;
+    margin: 0 -10px;
   }
 
   li {
-    padding: 20px;
-
-    @include breakpoint(medium-desktop-up) {
-      padding: 10px 20px;
-    }
+    padding: 10px;
 
     img {
-      @include breakpoint(medium-mobile-down) {
+      @include breakpoint(large-mobile-down) {
         max-width: 100px;
+      }
+
+      @include breakpoint(medium-mobile-down) {
+        max-width: 80px;
       }
     }
   }

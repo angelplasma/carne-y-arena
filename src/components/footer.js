@@ -15,24 +15,28 @@ const Footer = () => (
       <Link to="/privacy">Privacy Policy</Link>
     </p>
 
-    <p styleName="producers-intro">
-      Produced and Financed by Legendary Entertainment, Fondazione Prada and Emerson Collective.
-    </p>
+    <div>
+      <h2>
+        Produced and Financed by Legendary Entertainment, Fondazione Prada and Emerson Collective.
+      </h2>
 
-    <ul styleName="logos">
-      <li><img src={lpLogo} alt="Legendary Entertainment" width="107" /></li>
-      <li><img src={fpLogo} alt="Fondazione Prada" width="152" /></li>
-      <li><img src={ecLogo} alt="Emerson Collective" width="138" /></li>
-    </ul>
+      <ul styleName="logos">
+        <li><img src={lpLogo} alt="Legendary Entertainment" width="101" /></li>
+        <li><img src={fpLogo} alt="Fondazione Prada" width="149" /></li>
+        <li><img src={ecLogo} alt="Emerson Collective" width="129" /></li>
+      </ul>
+    </div>
 
-    <p styleName="partners-intro">
-      Washington, D.C. Community Partners
-    </p>
+    <div styleName="partners">
+      <h2>
+        Washington, D.C. Community Partners
+      </h2>
 
-    <ul styleName="logos">
-      <li><img src={phLogo} alt="The Phillips Collection" width="120" /></li>
-      <li><img src={atLogo} alt="Atlas Performing Arts Center" width="90" /></li>
-    </ul>
+      <ul styleName="logos">
+        <li><img src={phLogo} alt="The Phillips Collection" width="113" /></li>
+        <li><img src={atLogo} alt="Atlas Performing Arts Center" width="98" /></li>
+      </ul>
+    </div>
   </footer>
 )
 
