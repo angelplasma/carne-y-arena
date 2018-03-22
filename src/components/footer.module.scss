@@ -41,7 +41,6 @@
   margin-top: 0;
 
   @include breakpoint(medium-desktop-up) {
-    order: 99;
     margin-left: auto;
   }
 

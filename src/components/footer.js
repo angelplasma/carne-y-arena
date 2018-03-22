@@ -10,11 +10,6 @@ import atLogo from '../images/atlas-logo.png'
 
 const Footer = () => (
   <footer styleName="footer">
-    <p styleName="links">
-      <Link to="/terms">Terms & Conditions</Link>
-      <Link to="/privacy">Privacy Policy</Link>
-    </p>
-
     <div>
       <h2>
         Produced and Financed by Legendary Entertainment, Fondazione Prada and Emerson Collective.
@@ -37,6 +32,11 @@ const Footer = () => (
         <li><img src={atLogo} alt="Atlas Performing Arts Center" width="98" /></li>
       </ul>
     </div>
+
+    <p styleName="links">
+      <Link to="/terms">Terms & Conditions</Link>
+      <Link to="/privacy">Privacy Policy</Link>
+    </p>
   </footer>
 )
 
