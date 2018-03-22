@@ -37,4 +37,4 @@ yarn build
 
 ## Deployment
 
-[TODO]
+To deploy to the staging site simply commit or merge your work into the master branch. To deploy to the production site simply merge master into the production branch with `git merge --ff-only master`.
