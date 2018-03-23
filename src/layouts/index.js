@@ -6,7 +6,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import './index.scss'
 
-const TemplateWrapper = ({ data, children, location }) => (
+const TemplateWrapper = ({ data, children }) => (
   <div>
     <Helmet
       htmlAttributes={{
@@ -19,6 +19,10 @@ const TemplateWrapper = ({ data, children, location }) => (
         {
           name: 'description',
           content: data.site.siteMetadata.description,
+        },
+        {
+          property: 'og:image',
+          content: 'https://carneyarenadc.com/og-image.jpg',
         },
       ]}
       script={[
