@@ -29,6 +29,10 @@ const TemplateWrapper = ({ data, children }) => (
           content: data.site.siteMetadata.title,
         },
         {
+          property: 'twitter:description',
+          content: data.site.siteMetadata.description,
+        },
+        {
           property: 'twitter:image',
           content: 'https://carneyarenadc.com/og-image.jpg',
         },
