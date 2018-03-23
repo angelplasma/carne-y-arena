@@ -103,6 +103,10 @@
       @include breakpoint(medium-mobile-down) {
         max-width: 100px;
       }
+
+      @include breakpoint(small-mobile-down) {
+        max-width: 80px;
+      }
     }
   }
 }
