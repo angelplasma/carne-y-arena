@@ -97,11 +97,11 @@
 
     img {
       @include breakpoint(large-mobile-down) {
-        max-width: 100px;
+        max-width: 120px;
       }
 
       @include breakpoint(medium-mobile-down) {
-        max-width: 80px;
+        max-width: 100px;
       }
     }
   }
