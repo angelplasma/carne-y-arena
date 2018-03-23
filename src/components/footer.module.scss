@@ -97,7 +97,7 @@
 
     img {
       @include breakpoint(large-mobile-down) {
-        max-width: 120px;
+        max-width: 115px;
       }
 
       @include breakpoint(medium-mobile-down) {
