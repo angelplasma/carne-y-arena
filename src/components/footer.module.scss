@@ -8,6 +8,10 @@
   padding: 20px;
   width: 100%;
 
+  @include breakpoint(large-mobile-down) {
+    padding: 20px 0;
+  }
+
   @include breakpoint(small-desktop-down) {
     text-align: center;
   }
@@ -28,6 +32,14 @@
   h2 {
     font-family: $regular;
     font-size: 11px;
+
+    @include breakpoint(large-mobile-down) {
+      padding: 0 30px;
+    }
+
+    @include breakpoint(small-mobile-down) {
+      padding: 0 20px;
+    }
   }
 }
 

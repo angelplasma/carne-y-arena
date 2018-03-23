@@ -11,6 +11,11 @@
 
   @include breakpoint(small-tablet-up) {
     padding-top: 100px;
+    width: 45%;
+  }
+
+  @media (min-width: 800px) {
+    width: 50%;
   }
 
   @include breakpoint($desktop-nav) {
@@ -19,15 +24,7 @@
 }
 
 .logo {
-  width: 280px;
 
-  @include breakpoint(large-mobile-up) {
-    width: 360px;
-  }
-
-  @include breakpoint(small-tablet-up) {
-    width: 415px;
-  }
 }
 
 .summary {
@@ -35,6 +32,14 @@
   font-size: 18px;
   line-height: 1.25;
   margin: 1.5em 0;
+
+  @include breakpoint(large-mobile-down) {
+    margin: 1.25em 0
+  }
+
+  @include breakpoint(small-mobile-down) {
+    font-size: 16px;
+  }
 
   @include breakpoint(small-tablet-up) {
     font-size: 20px;
@@ -50,17 +55,11 @@
     min-height: 100%;
 
     body {
-      background-position: 50% 0;
       background-repeat: no-repeat;
 
       @include breakpoint(large-mobile-down) {
-        background-size: 1310px auto;
-        height: 100vh;
-        max-height: 700px;
-      }
-
-      @media (max-width: 420px) and (max-aspect-ratio: 16/9) {
         background-size: cover;
+        background-position: 50%;
         height: auto;
         max-height: none;
         min-height: 100vh;
@@ -71,11 +70,11 @@
       }
 
       @media (min-width: 600px) and (max-width: 700px) {
-        background-position-x: 39%;
+        background-position-x: 38%;
       }
 
       @media (min-width: 700px) and (max-width: 800px) {
-        background-position-x: 34%;
+        background-position-x: 30%;
       }
 
       @media (min-width: 800px) and (max-width: 899px) {
@@ -83,7 +82,7 @@
       }
 
       @media (min-width: 900px) and (max-width: 949px) {
-        background-position-x: 22%;
+        background-position-x: 20%;
       }
 
       @media (min-width: 950px) and (max-width: 1023px) {
@@ -91,23 +90,37 @@
       }
 
       @media (min-width: 1024px) {
-        background-position-x: 0;
+        background-position-x: 5%;
+      }
+
+      @media (min-width: 1400px) {
+        background-position: 50% 0;
       }
 
       @media (min-width: 1600px) {
-        background-position: 50% 0;
         background-size: cover;
         min-height: 56.25vw;
       }
     }
 
     // images optimized with imgix sandbox: https://sandbox.imgix.com/
+    body {
+      @include breakpoint(large-mobile-down) {
+        background-image: url('../images/bg-small-q75-sharp10.jpeg');
+      }
+    }
+
     &[data-webp="true"] body {
-      background-image: url('../images/bg-q65-sharp20.webp');
+      @include breakpoint(small-tablet-up) {
+        background-image: url('../images/bg-q65-sharp20.webp');
+      }
     }
 
     &[data-webp="false"] body {
-      background-image: url('../images/bg-q75-sharp10.jpeg');
+
+      @include breakpoint(small-tablet-up) {
+        background-image: url('../images/bg-q75-sharp10.jpeg');
+      }
     }
 
     body,
