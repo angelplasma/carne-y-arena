@@ -34,7 +34,7 @@ class Nav extends React.Component {
 
         <li>
           <Link to="/contact" styleName="link" activeClassName={styles.active}>
-            Contact
+            Contact & Press
           </Link>
         </li>
       </ul>

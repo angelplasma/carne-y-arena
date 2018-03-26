@@ -19,6 +19,10 @@ const ContactPage = () => (
         <a href="mailto:kristin@suttonpr.com">kristin@suttonpr.com</a>
       </p>
     </div>
+
+    <p>
+      <a href="/Carne y Arena DC Press Release.pdf" className="button">View Press Release</a>
+    </p>
   </div>
 )
 
