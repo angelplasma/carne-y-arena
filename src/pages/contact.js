@@ -21,7 +21,7 @@ const ContactPage = () => (
     </div>
 
     <p>
-      <a href="/Carne y Arena DC Press Release.pdf" className="button">View Press Release</a>
+      <a href="/Carne y Arena DC Press Release 3 26 2018.pdf" className="button">View Press Release</a>
     </p>
   </div>
 )
