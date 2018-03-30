@@ -9,7 +9,7 @@
 
 + Node 6.11.1
 + [Yarn](https://yarnpkg.com/)
-+ [GatsbyJS](https://www.gatsbyjs.org/docs/)
++ [Gatsby](https://www.gatsbyjs.org/docs/) (command line tool)
 
 ## Setup
 
